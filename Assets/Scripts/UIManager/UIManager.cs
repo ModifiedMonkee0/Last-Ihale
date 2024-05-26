@@ -35,7 +35,7 @@ public class UIManager : MonoBehaviour
         _SirketPanel.SetActive(false);
     }
 
-    public void SýrketSayfaAc()
+    public void SirketSayfaAc()
     {
         _sinkedInPanel.SetActive(false);
         _ihalePanel.SetActive(false);

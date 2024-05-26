@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d78763599bbd53d4f88de6110df58025, type: 3}
-  m_Name: Ihale 20
+  m_Name: Ihale 41
   m_EditorClassIdentifier: 
-  ihaleAdi: "T\xFCnel Kaz\u0131 \u0130halesi"
+  ihaleAdi: "Telekom\xFCnikasyon Altyap\u0131s\u0131 \u0130halesi"
   ihaleKodu: 
   ihaleSahibi: 
-  ihaleFiyati: 15000000
+  ihaleFiyati: 25000000
   ihaleTarihi: 
