@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ihale 30
   m_EditorClassIdentifier: 
   ihaleAdi: "Otoyol Geni\u015Fletme \u0130halesi "
-  ihaleKodu: 
-  ihaleSahibi: 
   ihaleFiyati: 50000000
-  ihaleTarihi: 
+  gerekliIsciler: 0
+  gerekliMuhendisler: 0
+  ekucretler: 25000000

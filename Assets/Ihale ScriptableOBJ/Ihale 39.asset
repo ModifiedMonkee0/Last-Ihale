@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ihale 39
   m_EditorClassIdentifier: 
   ihaleAdi: "Stadyum \u0130n\u015Faat \u0130halesi"
-  ihaleKodu: 
-  ihaleSahibi: 
   ihaleFiyati: 150000000
-  ihaleTarihi: 
+  gerekliIsciler: 0
+  gerekliMuhendisler: 0
+  ekucretler: 75000000

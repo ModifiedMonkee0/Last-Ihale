@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ihale 5
   m_EditorClassIdentifier: 
   ihaleAdi: "Otopark \u0130n\u015Faat \u0130halesi"
-  ihaleKodu: 
-  ihaleSahibi: 
   ihaleFiyati: 200000
-  ihaleTarihi: 
+  gerekliIsciler: 0
+  gerekliMuhendisler: 0
+  ekucretler: 10000

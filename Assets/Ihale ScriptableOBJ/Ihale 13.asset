@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ihale 13
   m_EditorClassIdentifier: 
   ihaleAdi: "Al\u0131\u015Fveri\u015F Merkezi \u0130n\u015Faat \u0130halesi"
-  ihaleKodu: 
-  ihaleSahibi: 
   ihaleFiyati: 5000000
-  ihaleTarihi: 
+  gerekliIsciler: 0
+  gerekliMuhendisler: 0
+  ekucretler: 2500000

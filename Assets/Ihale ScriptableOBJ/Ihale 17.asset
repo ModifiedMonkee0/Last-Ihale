@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ihale 17
   m_EditorClassIdentifier: 
   ihaleAdi: "Deprem G\xFC\xE7lendirme \u0130halesi"
-  ihaleKodu: 
-  ihaleSahibi: 
   ihaleFiyati: 400000
-  ihaleTarihi: 
+  gerekliIsciler: 0
+  gerekliMuhendisler: 0
+  ekucretler: 200000

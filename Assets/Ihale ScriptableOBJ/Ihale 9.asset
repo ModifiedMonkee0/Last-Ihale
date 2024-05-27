@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ihale 9
   m_EditorClassIdentifier: 
   ihaleAdi: "Tarihi Bina Restorasyon \u0130halesi"
-  ihaleKodu: 
-  ihaleSahibi: 
   ihaleFiyati: 250000
-  ihaleTarihi: 
+  gerekliIsciler: 0
+  gerekliMuhendisler: 0
+  ekucretler: 12500

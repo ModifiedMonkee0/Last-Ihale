@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ihale 6
   m_EditorClassIdentifier: 
   ihaleAdi: "Yang\u0131n S\xF6nd\xFCrme Sistemi \u0130halesi"
-  ihaleKodu: 
-  ihaleSahibi: 
   ihaleFiyati: 50000
-  ihaleTarihi: 
+  gerekliIsciler: 0
+  gerekliMuhendisler: 0
+  ekucretler: 25000

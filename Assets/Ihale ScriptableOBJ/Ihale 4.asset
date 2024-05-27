@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ihale 4
   m_EditorClassIdentifier: 
   ihaleAdi: " Asfaltlama \u0130halesi"
-  ihaleKodu: 
-  ihaleSahibi: 
   ihaleFiyati: 75000
-  ihaleTarihi: 
+  gerekliIsciler: 0
+  gerekliMuhendisler: 0
+  ekucretler: 37500

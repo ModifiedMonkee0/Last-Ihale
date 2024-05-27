@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ihale 33
   m_EditorClassIdentifier: 
   ihaleAdi: "Petrol Rafinerisi \u0130n\u015Faat \u0130halesi"
-  ihaleKodu: 
-  ihaleSahibi: 
   ihaleFiyati: 300000000
-  ihaleTarihi: 
+  gerekliIsciler: 0
+  gerekliMuhendisler: 0
+  ekucretler: 150000000

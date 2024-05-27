@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ihale 12
   m_EditorClassIdentifier: 
   ihaleAdi: "Hastane \u0130n\u015Faat \u0130halesi"
-  ihaleKodu: 
-  ihaleSahibi: 
   ihaleFiyati: 2500000
-  ihaleTarihi: 
+  gerekliIsciler: 0
+  gerekliMuhendisler: 0
+  ekucretler: 125000

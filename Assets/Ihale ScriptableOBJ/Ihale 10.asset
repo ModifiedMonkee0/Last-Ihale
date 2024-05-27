@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ihale 10
   m_EditorClassIdentifier: 
   ihaleAdi: "Yol Yap\u0131m \u0130halesi"
-  ihaleKodu: 
-  ihaleSahibi: 
   ihaleFiyati: 500000
-  ihaleTarihi: 
+  gerekliIsciler: 0
+  gerekliMuhendisler: 0
+  ekucretler: 250000

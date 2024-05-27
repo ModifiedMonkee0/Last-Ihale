@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ihale 7
   m_EditorClassIdentifier: 
   ihaleAdi: "Trafik Sinyalizasyon Sistemi \u0130halesi"
-  ihaleKodu: 
-  ihaleSahibi: 
   ihaleFiyati: 60000
-  ihaleTarihi: 
+  gerekliIsciler: 0
+  gerekliMuhendisler: 0
+  ekucretler: 30000

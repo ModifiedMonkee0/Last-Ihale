@@ -7,6 +7,6 @@ public class IhaleData : ScriptableObject
     public float ihaleFiyati;
     public int gerekliIsciler;
     public int gerekliMuhendisler;
-    public int ekÜcretler;
+    public int ekucretler;
 
 }

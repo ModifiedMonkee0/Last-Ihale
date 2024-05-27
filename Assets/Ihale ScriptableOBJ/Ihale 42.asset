@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ihale 42
   m_EditorClassIdentifier: 
   ihaleAdi: "Toprak Islah Projesi \u0130halesi"
-  ihaleKodu: 
-  ihaleSahibi: 
   ihaleFiyati: 20000000
-  ihaleTarihi: 
+  gerekliIsciler: 0
+  gerekliMuhendisler: 0
+  ekucretler: 10000000

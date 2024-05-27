@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ihale 27
   m_EditorClassIdentifier: 
   ihaleAdi: "Metro \u0130stasyonu \u0130halesi"
-  ihaleKodu: 
-  ihaleSahibi: 
   ihaleFiyati: 20000000
-  ihaleTarihi: 
+  gerekliIsciler: 0
+  gerekliMuhendisler: 0
+  ekucretler: 12500000

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ihale 22
   m_EditorClassIdentifier: 
   ihaleAdi: "Kanalizasyon Sistemi \u0130halesi "
-  ihaleKodu: 
-  ihaleSahibi: 
   ihaleFiyati: 3500000
-  ihaleTarihi: 
+  gerekliIsciler: 0
+  gerekliMuhendisler: 0
+  ekucretler: 1750000

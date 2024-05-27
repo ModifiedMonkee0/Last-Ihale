@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2555,48 +2555,53 @@ MonoBehaviour:
   - {fileID: 1668655627}
   - {fileID: 1896131920}
   - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
-  - {fileID: 1896131920}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &997446000
 Transform:
   m_ObjectHideFlags: 0
@@ -4075,7 +4080,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1995824089454608, guid: e2e6970f9dbe45743858950d9b85475f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4007291449629790, guid: e2e6970f9dbe45743858950d9b85475f, type: 3}
       propertyPath: m_LocalPosition.x

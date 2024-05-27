@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ihale 2
   m_EditorClassIdentifier: 
   ihaleAdi: "Yaya K\xF6pr\xFCs\xFC \u0130n\u015Faat \u0130halesi"
-  ihaleKodu: 
-  ihaleSahibi: 
   ihaleFiyati: 150000
-  ihaleTarihi: 
+  gerekliIsciler: 0
+  gerekliMuhendisler: 0
+  ekucretler: 75000

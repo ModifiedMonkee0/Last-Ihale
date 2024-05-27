@@ -54,7 +54,7 @@ public class UIManager : MonoBehaviour
     private void Update()
     {
 
-        currentMoney.text = "Þuanki Paran: " + playerData.currentMoney.ToString("C2");
+        currentMoney.text = "suanki Paran: " + playerData.currentMoney.ToString("C2");
     }
     //Karakter UI
 

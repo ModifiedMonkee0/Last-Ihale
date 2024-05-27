@@ -27,7 +27,7 @@ public class OpenPC : MonoBehaviour
                 pcCamera.SetActive(true);
                 PcOpened();
                 
-                //pc uý para aktif
+                //pc uï¿½ para aktif
                 currentPara.SetActive(true);
             }
         }
@@ -37,7 +37,7 @@ public class OpenPC : MonoBehaviour
     private void Update()
     {
 
-        currentMoney.text = "Þuanki Paran: " + playerData.currentMoney.ToString("C2");
+        currentMoney.text = "Suanki Paran: " + playerData.currentMoney.ToString("C2");
     }
 
     private void OnTriggerExit(Collider other)

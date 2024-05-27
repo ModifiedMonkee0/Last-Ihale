@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ihale 14
   m_EditorClassIdentifier: 
   ihaleAdi: "Toplu Konut Projesi \u0130halesi"
-  ihaleKodu: 
-  ihaleSahibi: 
   ihaleFiyati: 3000000
-  ihaleTarihi: 
+  gerekliIsciler: 0
+  gerekliMuhendisler: 0
+  ekucretler: 1500000

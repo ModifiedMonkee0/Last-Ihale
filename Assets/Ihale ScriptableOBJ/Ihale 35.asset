@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ihale 35
   m_EditorClassIdentifier: 
   ihaleAdi: "Jeotermal Enerji Santrali \u0130halesi"
-  ihaleKodu: 
-  ihaleSahibi: 
   ihaleFiyati: 60000000
-  ihaleTarihi: 
+  gerekliIsciler: 0
+  gerekliMuhendisler: 0
+  ekucretler: 30000000
