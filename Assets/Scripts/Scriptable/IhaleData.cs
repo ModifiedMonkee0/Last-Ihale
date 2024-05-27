@@ -9,4 +9,6 @@ public class IhaleData : ScriptableObject
     public int gerekliMuhendisler;
     public int ekucretler;
 
+    [Range(0, 100)]
+    public float gerceklesmeOrani;
 }

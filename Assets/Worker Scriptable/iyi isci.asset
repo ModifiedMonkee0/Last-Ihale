@@ -9,12 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d78763599bbd53d4f88de6110df58025, type: 3}
-  m_Name: Ihale 5
+  m_Script: {fileID: 11500000, guid: 91f17a6668021fd429f8c036713ddebb, type: 3}
+  m_Name: iyi isci
   m_EditorClassIdentifier: 
-  ihaleAdi: "Otopark \u0130n\u015Faat \u0130halesi"
-  ihaleFiyati: 200000
-  gerekliIsciler: 0
-  gerekliMuhendisler: 0
-  ekucretler: 10000
-  gerceklesmeOrani: 50
+  workerName: "\u0130yi i\xE7ci"
+  hiringCost: 20
+  hourlyWage: 10
+  workerScore: 5

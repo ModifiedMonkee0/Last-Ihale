@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 91f17a6668021fd429f8c036713ddebb, type: 3}
-  m_Name: Worker 1
+  m_Name: kotuisci
   m_EditorClassIdentifier: 
-  workerName: "\u0130yi i\xE7ci"
-  hiringCost: 20
-  hourlyWage: 10
+  workerName: "K\xF6t\xFC i\u015Fci"
+  hiringCost: 10
+  hourlyWage: 5
+  workerScore: 2

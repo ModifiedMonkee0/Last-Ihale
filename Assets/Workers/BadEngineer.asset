@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91f17a6668021fd429f8c036713ddebb, type: 3}
-  m_Name: Worker 4
-  m_EditorClassIdentifier: 
+  m_Script: {fileID: 0}
+  m_Name: BadEngineer
+  m_EditorClassIdentifier: Assembly-CSharp::BadEngineer
   workerName: "K\xF6t\xFC M\xFChendis"
-  hiringCost: 50
-  hourlyWage: 10
+  hiringCost: 2500
+  hourlyWage: 7500
+  workerScore: 8
+  count: 1

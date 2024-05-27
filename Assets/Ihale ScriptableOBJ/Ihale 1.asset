@@ -17,3 +17,4 @@ MonoBehaviour:
   gerekliIsciler: 0
   gerekliMuhendisler: 0
   ekucretler: 25000
+  gerceklesmeOrani: 70

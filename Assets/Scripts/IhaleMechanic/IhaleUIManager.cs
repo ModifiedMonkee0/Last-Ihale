@@ -6,17 +6,17 @@ public class IhaleUIManager : MonoBehaviour
 {
     public IhaleData[] ihaleDataArray;  // ScriptableObject referanslarý
     public PlayerData playerData;       // Oyuncu verileri referansý
+    public WorkerAssignmentPanelManager workerAssignmentPanel; // Worker Assignment Panel referansý
 
     // 50 adet ihale isim, fiyat ve satýn alma butonu referanslarý
     public TMP_Text[] ihaleIsimArray = new TMP_Text[50];
     public TMP_Text[] ihaleFiyatArray = new TMP_Text[50];
     public Button[] ihaleSatinAlButtonArray = new Button[50];
 
-    //IhaleCorotine
-    public IhaleCorotine ihaleCorotine;
+    // IhaleCoroutine
+    public IhaleCoroutine ihaleCoroutine;
 
-    //ÞirketUIManager Referansý
-
+    // ÞirketUIManager Referansý
     public SirketUIManager þirketUIManager;
 
     void Start()
@@ -41,15 +41,17 @@ public class IhaleUIManager : MonoBehaviour
 
         if (playerData.currentMoney >= selectedIhale.ihaleFiyati && playerData.workerCount >= selectedIhale.gerekliIsciler)
         {
-            playerData.currentMoney -= selectedIhale.ihaleFiyati;
-            playerData.workerCount -= selectedIhale.gerekliIsciler;
-            playerData.SaveData(); // Satýn alma iþleminden sonra verileri kaydet
-            Debug.Log("Ýhale baþarýyla satýn alýndý: " + selectedIhale.ihaleAdi);
-
-            StartCoroutine(ihaleCorotine.IhaleSonucuCoroutine());
-
-            //sirket uý managere yolladýk?
-            þirketUIManager.SetIhaleAdi(selectedIhale.ihaleAdi);
+            // Ýlk boþ slotu al
+            int availableSlot = þirketUIManager.GetFirstAvailableSlot();
+            if (availableSlot != -1)
+            {
+                // Ýþçi atama panelini aç
+                workerAssignmentPanel.OpenPanel(selectedIhale, availableSlot, playerData);
+            }
+            else
+            {
+                Debug.Log("Tüm slotlar dolu. Yeni ihale alýnamýyor.");
+            }
         }
         else
         {

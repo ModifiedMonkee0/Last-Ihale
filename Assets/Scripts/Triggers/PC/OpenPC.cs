@@ -63,6 +63,15 @@ public class OpenPC : MonoBehaviour
         uıManager.karakterUI.SetActive(false);
     }
 
+    public void PcClose()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Player.SetActive(true);
+        uıManager.karakterUI.SetActive(true);
+        pcCamera.SetActive(false);
+        playerCamera.SetActive(true);
+    }
     
 
 
