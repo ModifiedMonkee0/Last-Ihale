@@ -12,6 +12,9 @@ public class OpenPC : MonoBehaviour
     public GameObject playerCamera;
     public GameObject pcCamera;
 
+    public GameObject currentPara;
+    public TMP_Text currentMoney;
+    public PlayerData playerData;
     private void OnTriggerStay(Collider other)
     {
         if(other.CompareTag("Player"))
@@ -23,9 +26,18 @@ public class OpenPC : MonoBehaviour
                 playerCamera.SetActive(false);
                 pcCamera.SetActive(true);
                 PcOpened();
+                
+                //pc uý para aktif
+                currentPara.SetActive(true);
             }
         }
 
+    }
+
+    private void Update()
+    {
+
+        currentMoney.text = "Þuanki Paran: " + playerData.currentMoney.ToString("C2");
     }
 
     private void OnTriggerExit(Collider other)
@@ -43,6 +55,7 @@ public class OpenPC : MonoBehaviour
         Player.SetActive(false);
     }
 
-
     
+
+
 }

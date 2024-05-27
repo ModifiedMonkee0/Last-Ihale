@@ -21,7 +21,7 @@ public class PlayerData : MonoBehaviour
 
     public void LoadData()
     {
-        currentMoney = PlayerPrefs.GetFloat("CurrentMoney", 1000f);  // Varsayýlan deðer 1000
+        currentMoney = PlayerPrefs.GetFloat("CurrentMoney", 1000000f);  // Varsayýlan deðer 1000
         workerCount = PlayerPrefs.GetInt("WorkerCount", 0);          // Varsayýlan deðer 0
         totalHourlyWage = PlayerPrefs.GetFloat("TotalHourlyWage", 0f); // Varsayýlan deðer 0
     }

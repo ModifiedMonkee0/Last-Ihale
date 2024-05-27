@@ -1,12 +1,16 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+
 public class IhaleUIManager : MonoBehaviour
 {
     public IhaleData[] ihaleDataArray;  // ScriptableObject referanslarý
+    public PlayerData playerData;       // Oyuncu verileri referansý
 
-    // 50 adet ihale isim ve fiyat metin referanslarý
+    // 50 adet ihale isim, fiyat ve satýn alma butonu referanslarý
     public TMP_Text[] ihaleIsimArray = new TMP_Text[50];
     public TMP_Text[] ihaleFiyatArray = new TMP_Text[50];
+    public Button[] ihaleSatinAlButtonArray = new Button[50];
 
     void Start()
     {
@@ -14,38 +18,30 @@ public class IhaleUIManager : MonoBehaviour
         {
             if (ihaleDataArray[i] != null)
             {
+                // Ýhale bilgilerini UI elemanlarýna atama
                 ihaleIsimArray[i].text = ihaleDataArray[i].ihaleAdi;
                 ihaleFiyatArray[i].text = ihaleDataArray[i].ihaleFiyati.ToString("C2");
+
+                int index = i;  // Ýhalenin indeksini yakalamak için
+                ihaleSatinAlButtonArray[i].onClick.AddListener(() => SatinAl(index));
             }
         }
     }
-}
-/*
-public class IhaleUIManager : MonoBehaviour
-{
-    public IhaleData ihaleData1;  // ScriptableObject referansý
-    public IhaleData ihaleData2;
 
-    //1
-    public TMP_Text _ihaleisim_1;
-    public TMP_Text _ihaleFiyat_1;
-    //2
-    public TMP_Text _ihaleisim_2;
-    public TMP_Text _ihaleFiyat_2;
-
-
-    void Start()
+    void SatinAl(int index)
     {
-        if (ihaleData1 != null && _ihaleisim_1 != null)
-        {
-            _ihaleisim_1.text = ihaleData1.ihaleAdi;  
-            _ihaleFiyat_1.text = ihaleData1.ihaleFiyati.ToString("C2");
+        IhaleData selectedIhale = ihaleDataArray[index];
 
-            _ihaleisim_2.text = ihaleData2.ihaleAdi;  
-            _ihaleFiyat_2.text = ihaleData2.ihaleFiyati.ToString("C2");
+        if (playerData.currentMoney >= selectedIhale.ihaleFiyati && playerData.workerCount >= selectedIhale.gerekliIsciler)
+        {
+            playerData.currentMoney -= selectedIhale.ihaleFiyati;
+            playerData.workerCount -= selectedIhale.gerekliIsciler;
+            playerData.SaveData(); // Satýn alma iþleminden sonra verileri kaydet
+            Debug.Log("Ýhale baþarýyla satýn alýndý: " + selectedIhale.ihaleAdi);
+        }
+        else
+        {
+            Debug.Log("Yeterli para veya iþçi yok: " + selectedIhale.ihaleAdi);
         }
     }
 }
-*/
-
-

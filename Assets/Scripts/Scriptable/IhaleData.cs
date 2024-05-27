@@ -4,8 +4,9 @@ using UnityEngine;
 public class IhaleData : ScriptableObject
 {
     public string ihaleAdi;
-    public string ihaleKodu;
-    public string ihaleSahibi;
     public float ihaleFiyati;
-    public string ihaleTarihi;
+    public int gerekliIsciler;
+    public int gerekliMuhendisler;
+    public int ek‹cretler;
+
 }
