@@ -6,6 +6,8 @@ using TMPro;
 
 public class OpenPC : MonoBehaviour
 {
+    public UIManager uıManager;
+
     public GameObject Player;
     public GameObject usePC;
 
@@ -15,29 +17,33 @@ public class OpenPC : MonoBehaviour
     public GameObject currentPara;
     public TMP_Text currentMoney;
     public PlayerData playerData;
-    private void OnTriggerStay(Collider other)
+
+    private bool playerInRange = false;
+    private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
         {
             usePC.SetActive(true);
+            playerInRange = true;
 
-            if(Input.GetKeyDown(KeyCode.E))
-            {
-                playerCamera.SetActive(false);
-                pcCamera.SetActive(true);
-                PcOpened();
-                
-                //pc u� para aktif
-                currentPara.SetActive(true);
-            }
         }
 
     }
 
     private void Update()
     {
+       currentMoney.text = "Suanki Paran: " + playerData.currentMoney.ToString("C2");
 
-        currentMoney.text = "Suanki Paran: " + playerData.currentMoney.ToString("C2");
+        //ınput manager?
+        if (Input.GetKeyDown(KeyCode.E) && playerInRange)
+        {
+            playerCamera.SetActive(false);
+            pcCamera.SetActive(true);
+            PcOpened();
+
+            
+            currentPara.SetActive(true);
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -45,6 +51,7 @@ public class OpenPC : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             usePC.SetActive(false);
+            playerInRange = false;
         }
     }
 
@@ -53,6 +60,7 @@ public class OpenPC : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         Player.SetActive(false);
+        uıManager.karakterUI.SetActive(false);
     }
 
     

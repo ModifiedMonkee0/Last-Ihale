@@ -14,11 +14,14 @@ public class UIManager : MonoBehaviour
     public GameObject _ihalePanel;
     public GameObject _sinkedInPanel;
     public GameObject _SirketPanel;
+
+    public GameObject pcUI;
     //Pc UI
 
     //Karakter UI
     public TMP_Text currentMoney;
     public PlayerData playerData;
+    public GameObject karakterUI;
     //Karakter UI
     private void Start()
     {

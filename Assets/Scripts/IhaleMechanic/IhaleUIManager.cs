@@ -12,6 +12,13 @@ public class IhaleUIManager : MonoBehaviour
     public TMP_Text[] ihaleFiyatArray = new TMP_Text[50];
     public Button[] ihaleSatinAlButtonArray = new Button[50];
 
+    //IhaleCorotine
+    public IhaleCorotine ihaleCorotine;
+
+    //ÞirketUIManager Referansý
+
+    public SirketUIManager þirketUIManager;
+
     void Start()
     {
         for (int i = 0; i < ihaleDataArray.Length && i < 50; i++)
@@ -38,6 +45,11 @@ public class IhaleUIManager : MonoBehaviour
             playerData.workerCount -= selectedIhale.gerekliIsciler;
             playerData.SaveData(); // Satýn alma iþleminden sonra verileri kaydet
             Debug.Log("Ýhale baþarýyla satýn alýndý: " + selectedIhale.ihaleAdi);
+
+            StartCoroutine(ihaleCorotine.IhaleSonucuCoroutine());
+
+            //sirket uý managere yolladýk?
+            þirketUIManager.SetIhaleAdi(selectedIhale.ihaleAdi);
         }
         else
         {
