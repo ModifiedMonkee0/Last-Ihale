@@ -20,24 +20,39 @@ public class UIManager : MonoBehaviour
 
     //Karakter UI
     public TMP_Text currentMoney;
+    public TMP_Text hourlyWage;
+    public TMP_Text timerText;
     public PlayerData playerData;
     public GameObject karakterUI;
     //Karakter UI
+
+    private WorkerPaymentScheduler workerPaymentScheduler;
+
     private void Start()
     {
         _sinkedInPanel.SetActive(false);
         _ihalePanel.SetActive(true);
         _SirketPanel.SetActive(false);
+
+        workerPaymentScheduler = FindObjectOfType<WorkerPaymentScheduler>();
+        workerPaymentScheduler.OnTimerTick += UpdateTimer;
+
+        UpdateHourlyWage(); // Baþlangýçta saatlik ücreti güncelle
     }
+
+    private void OnDestroy()
+    {
+        workerPaymentScheduler.OnTimerTick -= UpdateTimer;
+    }
+
     public void SinkedSayfaInAc()
     {
         _sinkedInPanel.SetActive(true);
         _ihalePanel.SetActive(false);
         _SirketPanel.SetActive(false);
-
     }
-    
-    public void IhalelerSayfaAc ()
+
+    public void IhalelerSayfaAc()
     {
         _sinkedInPanel.SetActive(false);
         _ihalePanel.SetActive(true);
@@ -56,9 +71,16 @@ public class UIManager : MonoBehaviour
     //Karakter UI
     private void Update()
     {
-
-        currentMoney.text = "suanki Paran: " + playerData.currentMoney.ToString("C2");
+        currentMoney.text = "Suanki Paran: " + playerData.currentMoney.ToString("C2");
     }
-    //Karakter UI
 
+    private void UpdateTimer(float timer)
+    {
+        timerText.text = "Sonraki ödeme: " + Mathf.Ceil(timer).ToString() + " saniye";
+    }
+
+    private void UpdateHourlyWage()
+    {
+        hourlyWage.text = "Saatlik Ücret: " + playerData.totalHourlyWage.ToString("C2");
+    }
 }

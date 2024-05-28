@@ -76,6 +76,15 @@ public class AssignWorker : MonoBehaviour
         kotuMuhendis.text = kotuMuhendisCount.ToString();
     }
 
+    public void ResetCounts()
+    {
+        iyiMuhendisCount = 0;
+        iyiWorkerCount = 0;
+        kotuWorkerCount = 0;
+        kotuMuhendisCount = 0;
+        UpdateTextFields();
+    }
+
     public Dictionary<WorkerData, int> GetAssignedWorkers()
     {
         Dictionary<WorkerData, int> assignedWorkers = new Dictionary<WorkerData, int>();
@@ -91,6 +100,6 @@ public class AssignWorker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        UpdateTextFields();
     }
 }

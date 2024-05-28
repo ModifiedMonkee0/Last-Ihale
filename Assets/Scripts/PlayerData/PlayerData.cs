@@ -80,6 +80,8 @@ public class PlayerData : MonoBehaviour
         else
         {
             Debug.Log("Yeterli para yok, iþçilere ödeme yapýlamadý!");
+            float borc = currentMoney - totalHourlyWage;
+            Debug.Log("Borçlandýn! Toplam Borç" + borc);
         }
     }
 }

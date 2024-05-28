@@ -90,6 +90,8 @@ public class WorkerAssignmentPanelManager : MonoBehaviour
             // Ýþçi sayýsýný güncelle
             UpdateWorkerCounts();
 
+            assignWorker.ResetCounts();
+
             // Paneli kapat
             ClosePanel();
         }
