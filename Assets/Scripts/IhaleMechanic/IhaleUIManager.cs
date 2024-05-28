@@ -17,7 +17,7 @@ public class IhaleUIManager : MonoBehaviour
     public IhaleCoroutine ihaleCoroutine;
 
     // ÞirketUIManager Referansý
-    public SirketUIManager þirketUIManager;
+    public SirketUIManager sirketUIManager; // Bu alaný ekleyin
 
     void Start()
     {
@@ -42,7 +42,7 @@ public class IhaleUIManager : MonoBehaviour
         if (playerData.currentMoney >= selectedIhale.ihaleFiyati && playerData.workerCount >= selectedIhale.gerekliIsciler)
         {
             // Ýlk boþ slotu al
-            int availableSlot = þirketUIManager.GetFirstAvailableSlot();
+            int availableSlot = sirketUIManager.GetFirstAvailableSlot();
             if (availableSlot != -1)
             {
                 // Ýþçi atama panelini aç

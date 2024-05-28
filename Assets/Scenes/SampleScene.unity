@@ -268,13 +268,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 56753936}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.2, y: -10.307281, z: -285.24}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 50.719997, y: -0.20385489, z: -141.92003}
+  m_LocalScale: {x: 1.333333, y: 1.3333334, z: 1.333333}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1501065242}
-  m_Father: {fileID: 0}
+  - {fileID: 823029316}
+  m_Father: {fileID: 1413261594}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &59227344
 GameObject:
@@ -3623,7 +3624,7 @@ PrefabInstance:
       addedObject: {fileID: 1046951817}
     - targetCorrespondingSourceObject: {fileID: 261786959625234688, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 823029316}
+      addedObject: {fileID: 56753937}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
 --- !u!1 &413023945
@@ -6393,12 +6394,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823029315}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 50.719997, y: -0.20385489, z: -141.92003}
-  m_LocalScale: {x: 1.333333, y: 1.3333334, z: 1.333333}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.000034332275, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1413261594}
+  m_Father: {fileID: 56753937}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &823029317
 AudioSource:
@@ -14819,7 +14820,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1643774193
 Transform:
   m_ObjectHideFlags: 0
@@ -18375,10 +18376,10 @@ MonoBehaviour:
   m_Horizontal: 1
   m_Vertical: 1
   m_MovementType: 1
-  m_Elasticity: 0.1
+  m_Elasticity: 0.07
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 5
   m_Viewport: {fileID: 2029475880}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 0}
@@ -19615,7 +19616,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2121100794
 Transform:
   m_ObjectHideFlags: 0
@@ -19908,7 +19909,6 @@ SceneRoots:
   - {fileID: 612418662}
   - {fileID: 308201475}
   - {fileID: 401360267}
-  - {fileID: 56753937}
   - {fileID: 1902027079}
   - {fileID: 1104250361}
   - {fileID: 1287624529}
