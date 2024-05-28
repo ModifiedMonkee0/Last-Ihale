@@ -18,12 +18,13 @@ public class WorkerAssignmentPanelManager : MonoBehaviour
     public TMP_Text goodWorkerCountText;
     public TMP_Text badWorkerCountText;
 
-    private List<WorkerData> assignedWorkers = new List<WorkerData>();
+    private AssignWorker assignWorker;
 
     void Start()
     {
         assignButton.onClick.AddListener(AssignWorkers);
         panel.SetActive(false); // Baþlangýçta panel kapalý
+        assignWorker = FindObjectOfType<AssignWorker>(); // AssignWorker scriptine referans al
     }
 
     public void OpenPanel(IhaleData ihaleData, int slotIndex, PlayerData player)
@@ -45,56 +46,57 @@ public class WorkerAssignmentPanelManager : MonoBehaviour
 
     public void AssignWorkers()
     {
-        // Ýþçileri atama iþlemleri
-        assignedWorkers.Clear(); // Önceki atamalarý temizle
+        Dictionary<WorkerData, int> assignedWorkers = assignWorker.GetAssignedWorkers();
 
-        // Örneðin, kullanýcý arayüzünden seçilen iþçileri assignedWorkers listesine ekleyebilirsiniz
-        // Örnek olarak atanan iþçileri ekleyelim
-        int requiredGoodEngineers = 2; // Ýhtiyaç duyulan iyi mühendis sayýsý
-        int requiredBadEngineers = 2; // Ýhtiyaç duyulan kötü mühendis sayýsý
-        int requiredGoodWorkers = 2; // Ýhtiyaç duyulan iyi iþçi sayýsý
-        int requiredBadWorkers = 2; // Ýhtiyaç duyulan kötü iþçi sayýsý
-
-        if (playerData.goodEngineerData.count >= requiredGoodEngineers)
+        // Ýþçilerin yeterliliðini kontrol et
+        int totalAssignedWorkers = 0;
+        foreach (var workerCount in assignedWorkers.Values)
         {
-            assignedWorkers.Add(playerData.goodEngineerData); // Örnek olarak tümünü ekliyoruz, ihtiyaca göre seçebilirsiniz
-            playerData.goodEngineerData.count -= requiredGoodEngineers; // Sayýyý azaltýyoruz
+            totalAssignedWorkers += workerCount;
         }
 
-        if (playerData.badEngineerData.count >= requiredBadEngineers)
+        if (totalAssignedWorkers >= currentIhale.gerekliIsciler)
         {
-            assignedWorkers.Add(playerData.badEngineerData);
-            playerData.badEngineerData.count -= requiredBadEngineers;
-        }
+            // Ýþçileri atama iþlemleri
+            foreach (var workerEntry in assignedWorkers)
+            {
+                if (workerEntry.Key is GoodEngineer)
+                {
+                    (workerEntry.Key as GoodEngineer).count -= workerEntry.Value;
+                }
+                else if (workerEntry.Key is BadEngineer)
+                {
+                    (workerEntry.Key as BadEngineer).count -= workerEntry.Value;
+                }
+                else if (workerEntry.Key is GoodWorker)
+                {
+                    (workerEntry.Key as GoodWorker).count -= workerEntry.Value;
+                }
+                else if (workerEntry.Key is BadWorker)
+                {
+                    (workerEntry.Key as BadWorker).count -= workerEntry.Value;
+                }
+            }
 
-        if (playerData.goodWorkerData.count >= requiredGoodWorkers)
+            playerData.currentMoney -= currentIhale.ihaleFiyati;
+            playerData.SaveData();
+
+            // Ýhaleyi baþlat
+            playerData.ihaleCoroutine.StartIhale(currentSlotIndex, currentIhale, assignedWorkers);
+
+            // ÞirketUIManager'a ihale adýný gönderme
+            playerData.sirketUIManager.SetIhaleAdi(currentIhale.ihaleAdi, currentSlotIndex);
+
+            // Ýþçi sayýsýný güncelle
+            UpdateWorkerCounts();
+
+            // Paneli kapat
+            ClosePanel();
+        }
+        else
         {
-            assignedWorkers.Add(playerData.goodWorkerData);
-            playerData.goodWorkerData.count -= requiredGoodWorkers;
+            Debug.Log("Yeterli iþçi yok.");
         }
-
-        if (playerData.badWorkerData.count >= requiredBadWorkers)
-        {
-            assignedWorkers.Add(playerData.badWorkerData);
-            playerData.badWorkerData.count -= requiredBadWorkers;
-        }
-
-        // Atama iþlemi sonrasý paneli kapat
-        ClosePanel();
-
-        // Ihale satýn alma ve iþçi atama iþlemleri
-        playerData.currentMoney -= currentIhale.ihaleFiyati;
-        playerData.workerCount -= currentIhale.gerekliIsciler;
-        playerData.SaveData();
-
-        // Ýhaleyi baþlat
-        playerData.ihaleCoroutine.StartIhale(currentSlotIndex, currentIhale, assignedWorkers.ToArray());
-
-        // ÞirketUIManager'a ihale adýný gönderme
-        playerData.sirketUIManager.SetIhaleAdi(currentIhale.ihaleAdi, currentSlotIndex);
-
-        // Ýþçi sayýsýný güncelle
-        UpdateWorkerCounts();
     }
 
     private void UpdateWorkerCounts()

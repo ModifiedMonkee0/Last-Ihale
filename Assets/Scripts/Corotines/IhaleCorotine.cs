@@ -11,15 +11,15 @@ public class IhaleCoroutine : MonoBehaviour
     // Üç ayrý ihale için zamanlayýcýlarý tutan diziler
     private float[] remainingTimes = new float[3];
     private Coroutine[] coroutines = new Coroutine[3];
-    private List<WorkerData>[] assignedWorkers = new List<WorkerData>[3]; // Atanan iþçileri tutar
+    private Dictionary<WorkerData, int>[] assignedWorkers = new Dictionary<WorkerData, int>[3]; // Atanan iþçileri tutar
 
     private PlayerData playerData; // PlayerData referansý
 
-    public IEnumerator IhaleSonucuCoroutine(IhaleData ihaleData, WorkerData[] workers, int index)
+    public IEnumerator IhaleSonucuCoroutine(IhaleData ihaleData, Dictionary<WorkerData, int> workers, int index)
     {
         float remainingTime = 10f; // Baþlangýçta kalan süre 10 saniye
         remainingTimes[index] = remainingTime;
-        assignedWorkers[index] = new List<WorkerData>(workers); // Ýþçileri kaydet
+        assignedWorkers[index] = new Dictionary<WorkerData, int>(workers); // Ýþçileri kaydet
 
         while (remainingTimes[index] > 0f)
         {
@@ -34,9 +34,9 @@ public class IhaleCoroutine : MonoBehaviour
 
         // Ýþçilerin toplam puanýný hesapla
         float totalWorkerScore = 0f;
-        foreach (WorkerData worker in workers)
+        foreach (var workerEntry in workers)
         {
-            totalWorkerScore += worker.workerScore;
+            totalWorkerScore += workerEntry.Key.workerScore * workerEntry.Value;
         }
 
         // Gerçekleþme oranýný iþçi puanlarýyla birleþtir
@@ -59,6 +59,27 @@ public class IhaleCoroutine : MonoBehaviour
             Debug.Log("Ýhale kötü sonuçlandý.");
         }
 
+        // Ýhale tamamlandýðýnda iþçileri geri ekle
+        foreach (var workerEntry in workers)
+        {
+            if (workerEntry.Key is GoodEngineer)
+            {
+                (workerEntry.Key as GoodEngineer).count += workerEntry.Value;
+            }
+            else if (workerEntry.Key is BadEngineer)
+            {
+                (workerEntry.Key as BadEngineer).count += workerEntry.Value;
+            }
+            else if (workerEntry.Key is GoodWorker)
+            {
+                (workerEntry.Key as GoodWorker).count += workerEntry.Value;
+            }
+            else if (workerEntry.Key is BadWorker)
+            {
+                (workerEntry.Key as BadWorker).count += workerEntry.Value;
+            }
+        }
+
         // Ýhale tamamlandýðýnda iþçileri serbest býrak
         assignedWorkers[index].Clear();
 
@@ -66,7 +87,7 @@ public class IhaleCoroutine : MonoBehaviour
         OnIhaleCompleted?.Invoke(index);
     }
 
-    public void StartIhale(int index, IhaleData ihaleData, WorkerData[] workers)
+    public void StartIhale(int index, IhaleData ihaleData, Dictionary<WorkerData, int> workers)
     {
         if (coroutines[index] != null)
         {

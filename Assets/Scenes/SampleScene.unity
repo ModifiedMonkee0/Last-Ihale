@@ -1535,16 +1535,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iyiMuhendis: {fileID: 1918602902}
   iyiWorker: {fileID: 376917437}
-  kotuWorker: {fileID: 859570672}
-  kotuMuhendis: {fileID: 823436718}
+  kotuWorker: {fileID: 823436718}
+  kotuMuhendis: {fileID: 859570672}
   iyiMuhIncrease: {fileID: 1566962977}
   iyiMuhDecrease: {fileID: 1790134075}
   iyiWorkerIncrease: {fileID: 325071466}
   iyiWorkerDecrease: {fileID: 1192832527}
-  kotuWorkerIncrease: {fileID: 413023947}
-  kotuWorkerDecrease: {fileID: 1210597194}
-  kotuMuhendisIncrease: {fileID: 901838501}
-  kotuMuhendisDecrease: {fileID: 359047965}
+  kotuWorkerIncrease: {fileID: 901838501}
+  kotuWorkerDecrease: {fileID: 359047965}
+  kotuMuhendisIncrease: {fileID: 413023947}
+  kotuMuhendisDecrease: {fileID: 1210597194}
 --- !u!1 &240564354
 GameObject:
   m_ObjectHideFlags: 0
