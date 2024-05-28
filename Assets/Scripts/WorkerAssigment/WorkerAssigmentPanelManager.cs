@@ -50,10 +50,10 @@ public class WorkerAssignmentPanelManager : MonoBehaviour
 
         // Örneðin, kullanýcý arayüzünden seçilen iþçileri assignedWorkers listesine ekleyebilirsiniz
         // Örnek olarak atanan iþçileri ekleyelim
-        int requiredGoodEngineers = 1; // Ýhtiyaç duyulan iyi mühendis sayýsý
-        int requiredBadEngineers = 1; // Ýhtiyaç duyulan kötü mühendis sayýsý
-        int requiredGoodWorkers = 1; // Ýhtiyaç duyulan iyi iþçi sayýsý
-        int requiredBadWorkers = 1; // Ýhtiyaç duyulan kötü iþçi sayýsý
+        int requiredGoodEngineers = 2; // Ýhtiyaç duyulan iyi mühendis sayýsý
+        int requiredBadEngineers = 2; // Ýhtiyaç duyulan kötü mühendis sayýsý
+        int requiredGoodWorkers = 2; // Ýhtiyaç duyulan iyi iþçi sayýsý
+        int requiredBadWorkers = 2; // Ýhtiyaç duyulan kötü iþçi sayýsý
 
         if (playerData.goodEngineerData.count >= requiredGoodEngineers)
         {
@@ -99,9 +99,9 @@ public class WorkerAssignmentPanelManager : MonoBehaviour
 
     private void UpdateWorkerCounts()
     {
-        goodEngineerCountText.text = playerData.goodEngineerData.count.ToString();
-        badEngineerCountText.text = playerData.badEngineerData.count.ToString();
-        goodWorkerCountText.text = playerData.goodWorkerData.count.ToString();
-        badWorkerCountText.text = playerData.badWorkerData.count.ToString();
+        goodEngineerCountText.text = ("Ýyi Mühendis: " + playerData.goodEngineerData.count.ToString());
+        badEngineerCountText.text = ("Kötü Mühendis:" + playerData.badEngineerData.count.ToString());
+        goodWorkerCountText.text = ("Ýyi iþci: " + playerData.goodWorkerData.count.ToString());
+        badWorkerCountText.text = ("Kötü Ýþci: " + playerData.badWorkerData.count.ToString());
     }
 }

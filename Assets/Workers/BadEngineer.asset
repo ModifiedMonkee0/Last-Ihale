@@ -16,4 +16,4 @@ MonoBehaviour:
   hiringCost: 2500
   hourlyWage: 7500
   workerScore: 8
-  count: 1
+  count: 0

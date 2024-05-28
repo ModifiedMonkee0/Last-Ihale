@@ -18,6 +18,8 @@ public class OpenPC : MonoBehaviour
     public TMP_Text currentMoney;
     public PlayerData playerData;
 
+    public GameObject hirePanel;
+
     private bool playerInRange = false;
     private void OnTriggerEnter(Collider other)
     {
@@ -73,6 +75,9 @@ public class OpenPC : MonoBehaviour
         playerCamera.SetActive(true);
     }
     
-
+    public void CloseHirePanel()
+    {
+        hirePanel.SetActive(false);
+    }
 
 }
