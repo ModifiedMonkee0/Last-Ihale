@@ -72,6 +72,7 @@ public class UIManager : MonoBehaviour
     private void Update()
     {
         currentMoney.text = "Suanki Paran: " + playerData.currentMoney.ToString("C2");
+        UpdateHourlyWage();
     }
 
     private void UpdateTimer(float timer)
