@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerData : MonoBehaviour
@@ -83,5 +85,30 @@ public class PlayerData : MonoBehaviour
             float borc = currentMoney - totalHourlyWage;
             Debug.Log("Borçlandýn! Toplam Borç" + borc);
         }
+    }
+
+
+    //kredi iþlemleri
+    public void TakeLoan(float amount, float interestRate, float repaymentTime)
+    {
+        currentMoney += amount;
+        SaveData();
+        StartCoroutine(RepayLoan(amount, interestRate, repaymentTime));
+    }
+
+    private IEnumerator RepayLoan(float amount, float interestRate, float repaymentTime)
+    {
+        yield return new WaitForSeconds(repaymentTime);
+        float repaymentAmount = amount * (1 + interestRate / 100);
+        if (currentMoney >= repaymentAmount)
+        {
+            currentMoney -= repaymentAmount;
+        }
+        else
+        {
+            Debug.Log("Yeterli para yok, kredi geri ödenemedi!");
+            // Borç iþlemleri burada eklenebilir
+        }
+        SaveData();
     }
 }
