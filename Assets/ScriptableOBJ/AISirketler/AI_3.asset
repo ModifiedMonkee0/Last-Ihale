@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d78763599bbd53d4f88de6110df58025, type: 3}
-  m_Name: Ihale 1
+  m_Script: {fileID: 11500000, guid: 3836ac61f841e9f499afbc061b66b4fc, type: 3}
+  m_Name: AI_3
   m_EditorClassIdentifier: 
-  ihaleAdi: "Park ve Bah\xE7e D\xFCzenleme \u0130halesi"
-  ihaleFiyati: 50000
-  gerekliIsciler: 1
-  gerekliMuhendisler: 1
-  ekucretler: 25000
-  gerceklesmeOrani: 70
+  companyName: "Ko\xE7 Holding"
+  totalMoney: 180000
+  totalWorkers: 9
+  purchasedIhaleler:
+  - {fileID: 11400000, guid: 2884ba87c8a9ff44d850ed14ab89cfb5, type: 2}
+  difficultyLevel: 3

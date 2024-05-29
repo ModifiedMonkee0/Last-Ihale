@@ -1640,7 +1640,7 @@ GameObject:
   - component: {fileID: 136692379}
   - component: {fileID: 136692380}
   m_Layer: 0
-  m_Name: "A\u01311Comp"
+  m_Name: AI_Company_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1673,12 +1673,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7c991bd566294741ba3e1e38b47e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aiPlayerData: {fileID: 1288223420}
+  aiCompanyData: {fileID: 11400000, guid: ddf9d898b8db93342a104f83ad30b31b, type: 2}
   availableIhaleler:
   - {fileID: 11400000, guid: 578383ac92664364ead14a0dafe7903f, type: 2}
   - {fileID: 11400000, guid: 2884ba87c8a9ff44d850ed14ab89cfb5, type: 2}
   - {fileID: 11400000, guid: aeb0bf4be414c144da59bc31a9f95f65, type: 2}
-  checkInterval: 10
+  - {fileID: 11400000, guid: efca48af5f3c70846b3eeee3128b081b, type: 2}
+  checkInterval: 15
+  workerAdjustmentInterval: 30
+  workerCost: 5000
+  workerMaintenanceCost: 1000
+  maxWorkerAdjustment: 3
 --- !u!4 &138846513 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2460805002383449601, guid: 1b79aacebdd5be247a120ae44c9fbdd2, type: 3}
@@ -2139,15 +2144,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -145.9
+      value: -6.26
       objectReference: {fileID: 0}
     - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.2
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -282.4
+      value: -17.45
       objectReference: {fileID: 0}
     - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6494,7 +6499,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &427526753
 Transform:
   m_ObjectHideFlags: 0
@@ -6509,6 +6514,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 136692379}
+  - {fileID: 1506020959}
+  - {fileID: 651488175}
+  - {fileID: 1320789006}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &434028647
@@ -9000,6 +9008,61 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642614411}
   m_CullTransparentMesh: 1
+--- !u!1 &651488174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 651488175}
+  - component: {fileID: 651488176}
+  m_Layer: 0
+  m_Name: AI_Company_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &651488175
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651488174}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 427526753}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &651488176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651488174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7c991bd566294741ba3e1e38b47e654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aiCompanyData: {fileID: 11400000, guid: 8f76d5648fbceb148a7c09e10338944f, type: 2}
+  availableIhaleler:
+  - {fileID: 11400000, guid: 578383ac92664364ead14a0dafe7903f, type: 2}
+  - {fileID: 11400000, guid: 2884ba87c8a9ff44d850ed14ab89cfb5, type: 2}
+  - {fileID: 11400000, guid: aeb0bf4be414c144da59bc31a9f95f65, type: 2}
+  - {fileID: 11400000, guid: efca48af5f3c70846b3eeee3128b081b, type: 2}
+  checkInterval: 15
+  workerAdjustmentInterval: 30
+  workerCost: 5000
+  workerMaintenanceCost: 1000
+  maxWorkerAdjustment: 3
 --- !u!1 &657519594
 GameObject:
   m_ObjectHideFlags: 0
@@ -19585,6 +19648,61 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &1320789005
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1320789006}
+  - component: {fileID: 1320789007}
+  m_Layer: 0
+  m_Name: AI_Company_4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1320789006
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320789005}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 427526753}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1320789007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320789005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7c991bd566294741ba3e1e38b47e654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aiCompanyData: {fileID: 11400000, guid: 4536d4ee1586fe74588f86f7efc3e319, type: 2}
+  availableIhaleler:
+  - {fileID: 11400000, guid: 578383ac92664364ead14a0dafe7903f, type: 2}
+  - {fileID: 11400000, guid: 2884ba87c8a9ff44d850ed14ab89cfb5, type: 2}
+  - {fileID: 11400000, guid: aeb0bf4be414c144da59bc31a9f95f65, type: 2}
+  - {fileID: 11400000, guid: efca48af5f3c70846b3eeee3128b081b, type: 2}
+  checkInterval: 15
+  workerAdjustmentInterval: 30
+  workerCost: 5000
+  workerMaintenanceCost: 1000
+  maxWorkerAdjustment: 3
 --- !u!1 &1333083507
 GameObject:
   m_ObjectHideFlags: 0
@@ -22201,6 +22319,61 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2460805002383449601, guid: 1b79aacebdd5be247a120ae44c9fbdd2, type: 3}
   m_PrefabInstance: {fileID: 1779001910}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1506020958
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1506020959}
+  - component: {fileID: 1506020960}
+  m_Layer: 0
+  m_Name: AI_Company_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1506020959
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506020958}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 427526753}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1506020960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506020958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7c991bd566294741ba3e1e38b47e654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aiCompanyData: {fileID: 11400000, guid: 2c825650c8fc01049b52d628794bccae, type: 2}
+  availableIhaleler:
+  - {fileID: 11400000, guid: 578383ac92664364ead14a0dafe7903f, type: 2}
+  - {fileID: 11400000, guid: 2884ba87c8a9ff44d850ed14ab89cfb5, type: 2}
+  - {fileID: 11400000, guid: aeb0bf4be414c144da59bc31a9f95f65, type: 2}
+  - {fileID: 11400000, guid: efca48af5f3c70846b3eeee3128b081b, type: 2}
+  checkInterval: 15
+  workerAdjustmentInterval: 30
+  workerCost: 5000
+  workerMaintenanceCost: 1000
+  maxWorkerAdjustment: 3
 --- !u!1 &1508086339
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d78763599bbd53d4f88de6110df58025, type: 3}
-  m_Name: Ihale 4
+  m_Script: {fileID: 11500000, guid: 3836ac61f841e9f499afbc061b66b4fc, type: 3}
+  m_Name: AI_1
   m_EditorClassIdentifier: 
-  ihaleAdi: " Asfaltlama \u0130halesi"
-  ihaleFiyati: 75000
-  gerekliIsciler: 1
-  gerekliMuhendisler: 1
-  ekucretler: 37500
-  gerceklesmeOrani: 0
+  companyName: Crazy Games
+  totalMoney: 155000
+  totalWorkers: 9
+  purchasedIhaleler:
+  - {fileID: 11400000, guid: aeb0bf4be414c144da59bc31a9f95f65, type: 2}
+  difficultyLevel: 1
