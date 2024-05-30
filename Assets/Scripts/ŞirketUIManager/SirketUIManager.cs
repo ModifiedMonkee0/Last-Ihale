@@ -11,8 +11,14 @@ public class SirketUIManager : MonoBehaviour
     // Her bir ihale için UI bileþenlerini tanýmla
     public TMP_Text[] remainingTimeTexts = new TMP_Text[3];
     public TMP_Text[] ihaleAdiTexts = new TMP_Text[3];
+    public TMP_Text[] completionRateTexts = new TMP_Text[3]; // Final completion rate için ekledik
+
     private bool[] slotsOccupied = new bool[3]; // Slotlarýn doluluk durumu
 
+    private void Update()
+    {
+        
+    }
     void Start()
     {
         // IhaleCoroutine bileþenini dinamik olarak bul
@@ -24,6 +30,7 @@ public class SirketUIManager : MonoBehaviour
         // IhaleCoroutine sýnýfýndaki OnTimerTick ve OnIhaleCompleted olaylarýna abone ol
         if (ihaleCoroutine != null)
         {
+
             ihaleCoroutine.OnTimerTick += UpdateRemainingTimeUI;
             ihaleCoroutine.OnIhaleCompleted += ClearIhaleUI;
         }
@@ -31,6 +38,9 @@ public class SirketUIManager : MonoBehaviour
         {
             Debug.LogError("IhaleCoroutine bileþeni bulunamadý.");
         }
+
+        // Baþlangýçta UI bileþenlerini temizle
+        ClearAllIhaleUI();
     }
 
     // Kalan süreyi güncelleyen metot
@@ -71,7 +81,27 @@ public class SirketUIManager : MonoBehaviour
         {
             ihaleAdiTexts[index].text = "Ýhale yok";
             remainingTimeTexts[index].text = "--";
+            completionRateTexts[index].text = "--"; // Final completion rate'i temizle
             slotsOccupied[index] = false; // Slotu boþ olarak iþaretle
+        }
+    }
+
+    // Tüm UI elemanlarýný temizleyen metot
+    void ClearAllIhaleUI()
+    {
+        for (int i = 0; i < ihaleAdiTexts.Length; i++)
+        {
+            ClearIhaleUI(i);
+        }
+    }
+
+    // Final completion rate'i güncelleyen metot
+    public void UpdateCompletionRateUI(float completionRate, int index)
+    {
+        if (index >= 0 && index < completionRateTexts.Length)
+        {
+           
+            completionRateTexts[index].text = completionRate.ToString("F2") + "%";
         }
     }
 }

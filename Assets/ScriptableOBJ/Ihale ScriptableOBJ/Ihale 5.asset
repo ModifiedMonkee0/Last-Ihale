@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ihaleAdi: "Otopark \u0130n\u015Faat \u0130halesi"
   ihaleFiyati: 200000
-  gerekliIsciler: 0
-  gerekliMuhendisler: 0
+  gerekliIsciler: 5
+  gerekliMuhendisler: 7
   ekucretler: 10000
   gerceklesmeOrani: 50

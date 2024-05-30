@@ -11,13 +11,21 @@ public class IhaleUIManager : MonoBehaviour
     // 50 adet ihale isim, fiyat ve satýn alma butonu referanslarý
     public TMP_Text[] ihaleIsimArray = new TMP_Text[50];
     public TMP_Text[] ihaleFiyatArray = new TMP_Text[50];
+    public TMP_Text[] ihaleMühendisArray = new TMP_Text[50];
+    public TMP_Text[] ihaleIsciArray = new TMP_Text[50];
+    public TMP_Text[] ihaleGercekleþmeOraný = new TMP_Text[50];
+
     public Button[] ihaleSatinAlButtonArray = new Button[50];
+
+    public GameObject[] ihaleTutucularýArray;
+
+    
 
     // IhaleCoroutine
     public IhaleCoroutine ihaleCoroutine;
 
     // ÞirketUIManager Referansý
-    public SirketUIManager sirketUIManager; // Bu alaný ekleyin
+    public SirketUIManager sirketUIManager; 
 
     void Start()
     {
@@ -28,25 +36,31 @@ public class IhaleUIManager : MonoBehaviour
                 // Ýhale bilgilerini UI elemanlarýna atama
                 ihaleIsimArray[i].text = ihaleDataArray[i].ihaleAdi;
                 ihaleFiyatArray[i].text = ihaleDataArray[i].ihaleFiyati.ToString("C2");
+                ihaleMühendisArray[i].text = "Gerekli Mühendisler: " +ihaleDataArray[i].gerekliMuhendisler.ToString();
+                ihaleIsciArray[i].text = "Gerekli Ýþciler: " + ihaleDataArray[i].gerekliIsciler.ToString();
+                ihaleGercekleþmeOraný[i].text = "Baþarý Oraný: " + ihaleDataArray[i].gerceklesmeOrani.ToString();
 
-                int index = i;  // Ýhalenin indeksini yakalamak için
+
+
+                // Arraydeki her bir butona o ihalenin index'ini at
+                int index = i;  // Ýhalenin indeksini yakalamak için burayý kullandýk.
                 ihaleSatinAlButtonArray[i].onClick.AddListener(() => SatinAl(index));
             }
         }
     }
 
-    void SatinAl(int index)
+    public void SatinAl(int index)
     {
         IhaleData selectedIhale = ihaleDataArray[index];
 
-        if (playerData.currentMoney >= selectedIhale.ihaleFiyati && playerData.workerCount >= selectedIhale.gerekliIsciler)
+        if (playerData.currentMoney >= selectedIhale.ihaleFiyati && playerData.workerCount >= selectedIhale.gerekliIsciler + selectedIhale.gerekliMuhendisler)
         {
             // Ýlk boþ slotu al
             int availableSlot = sirketUIManager.GetFirstAvailableSlot();
             if (availableSlot != -1)
             {
                 // Ýþçi atama panelini aç
-                workerAssignmentPanel.OpenPanel(selectedIhale, availableSlot, playerData);
+                workerAssignmentPanel.OpenPanel(selectedIhale, availableSlot, playerData, index); // Index parametresi eklendi
             }
             else
             {

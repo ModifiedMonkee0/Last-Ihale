@@ -7,6 +7,7 @@ public class IhaleCoroutine : MonoBehaviour
 {
     public event Action<float, int> OnTimerTick; // Her saniyede bir çaðrýlacak olay, ihale indeksi ekledik
     public event Action<int> OnIhaleCompleted;  // Ýhale tamamlandýðýnda çaðrýlacak olay
+    public event Action<float, int> OnCompletionRateCalculated; // Final completion rate için olay
 
     // Üç ayrý ihale için zamanlayýcýlarý tutan diziler
     private float[] remainingTimes = new float[3];
@@ -21,6 +22,21 @@ public class IhaleCoroutine : MonoBehaviour
         remainingTimes[index] = remainingTime;
         assignedWorkers[index] = new Dictionary<WorkerData, int>(workers); // Ýþçileri kaydet
 
+        // Ýþçilerin toplam puanýný hesapla
+        float totalWorkerScore = 0f;
+        foreach (var workerEntry in workers)
+        {
+            totalWorkerScore += workerEntry.Key.workerScore * workerEntry.Value;
+        }
+
+        // Gerçekleþme oranýný iþçi puanlarýyla birleþtir
+        float finalCompletionRate = ihaleData.gerceklesmeOrani + totalWorkerScore;
+        finalCompletionRate = Mathf.Clamp(finalCompletionRate, 0f, 100f); // 0 ile 100 arasýnda kýsýtla
+
+        // Final completion rate olayýný tetikle
+        
+        OnCompletionRateCalculated?.Invoke(finalCompletionRate, index);
+
         while (remainingTimes[index] > 0f)
         {
             // Her saniyede bir kalan süreyi azalt
@@ -32,17 +48,7 @@ public class IhaleCoroutine : MonoBehaviour
             yield return null; // Bir sonraki frame'i bekle
         }
 
-        // Ýþçilerin toplam puanýný hesapla
-        float totalWorkerScore = 0f;
-        foreach (var workerEntry in workers)
-        {
-            totalWorkerScore += workerEntry.Key.workerScore * workerEntry.Value;
-        }
-
-        // Gerçekleþme oranýný iþçi puanlarýyla birleþtir
-        float finalCompletionRate = ihaleData.gerceklesmeOrani + totalWorkerScore;
-        finalCompletionRate = Mathf.Clamp(finalCompletionRate, 0f, 100f); // 0 ile 100 arasýnda kýsýtla
-        Debug.Log("final compation rate=" + finalCompletionRate);
+        Debug.Log("final completion rate=" + finalCompletionRate);
         Debug.Log("total worker score=" + totalWorkerScore);
 
         // Zaman dolduðunda sonucu belirle
@@ -51,7 +57,7 @@ public class IhaleCoroutine : MonoBehaviour
         if (isSuccessful)
         {
             Debug.Log("Ýhale iyi sonuçlandý.");
-            playerData.currentMoney += ihaleData.ihaleFiyati * 1.25f; // currentMoney'yi %125 artýr
+            playerData.currentMoney += ihaleData.ihaleFiyati * 1.5f; // currentMoney'yi %125 artýr
             playerData.SaveData();
         }
         else

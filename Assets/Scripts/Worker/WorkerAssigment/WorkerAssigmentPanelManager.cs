@@ -18,7 +18,11 @@ public class WorkerAssignmentPanelManager : MonoBehaviour
     public TMP_Text goodWorkerCountText;
     public TMP_Text badWorkerCountText;
 
+    public GameObject[] ihaleTutucularýArray;
+
     private AssignWorker assignWorker;
+
+    private int ihaleIndex; // Eklenen index deðiþkeni
 
     void Start()
     {
@@ -26,17 +30,21 @@ public class WorkerAssignmentPanelManager : MonoBehaviour
         panel.SetActive(false); // Baþlangýçta panel kapalý
         assignWorker = FindObjectOfType<AssignWorker>(); // AssignWorker scriptine referans al
     }
-
-    public void OpenPanel(IhaleData ihaleData, int slotIndex, PlayerData player)
+    private void Update()
+    {
+       
+    }
+    public void OpenPanel(IhaleData ihaleData, int slotIndex, PlayerData player, int ihaleIndex)
     {
         currentIhale = ihaleData;
         currentSlotIndex = slotIndex;
         playerData = player;
+        this.ihaleIndex = ihaleIndex; // Index'i burada atýyoruz
         ihaleAdiText.text = ihaleData.ihaleAdi;
         panel.SetActive(true);
-
         // Ýþçi sayýsýný UI'da güncelle
         UpdateWorkerCounts();
+
     }
 
     public void ClosePanel()
@@ -49,14 +57,24 @@ public class WorkerAssignmentPanelManager : MonoBehaviour
         Dictionary<WorkerData, int> assignedWorkers = assignWorker.GetAssignedWorkers();
 
         // Ýþçilerin yeterliliðini kontrol et
-        int totalAssignedWorkers = 0;
-        foreach (var workerCount in assignedWorkers.Values)
+        int totalEngineers = 0;
+        int totalWorkers = 0;
+
+        foreach (var workerEntry in assignedWorkers)
         {
-            totalAssignedWorkers += workerCount;
+            if (workerEntry.Key is GoodEngineer || workerEntry.Key is BadEngineer)
+            {
+                totalEngineers += workerEntry.Value;
+            }
+            else if (workerEntry.Key is GoodWorker || workerEntry.Key is BadWorker)
+            {
+                totalWorkers += workerEntry.Value;
+            }
         }
 
-        if (totalAssignedWorkers >= currentIhale.gerekliIsciler)
+        if (totalEngineers >= currentIhale.gerekliMuhendisler && totalWorkers >= currentIhale.gerekliIsciler)
         {
+            ihaleTutucularýArray[ihaleIndex].SetActive(false); // Index'i burada kullanýyoruz
             // Ýþçileri atama iþlemleri
             foreach (var workerEntry in assignedWorkers)
             {
@@ -78,6 +96,8 @@ public class WorkerAssignmentPanelManager : MonoBehaviour
                 }
             }
 
+            
+
             playerData.currentMoney -= currentIhale.ihaleFiyati;
             playerData.SaveData();
 
@@ -86,6 +106,17 @@ public class WorkerAssignmentPanelManager : MonoBehaviour
 
             // ÞirketUIManager'a ihale adýný gönderme
             playerData.sirketUIManager.SetIhaleAdi(currentIhale.ihaleAdi, currentSlotIndex);
+
+            // Final completion rate hesapla ve UI güncelle
+            float totalWorkerScore = 0f;
+            foreach (var workerEntry in assignedWorkers)
+            {
+                totalWorkerScore += workerEntry.Key.workerScore * workerEntry.Value;
+            }
+
+            float finalCompletionRate = currentIhale.gerceklesmeOrani + totalWorkerScore;
+            finalCompletionRate = Mathf.Clamp(finalCompletionRate, 0f, 100f);
+            playerData.sirketUIManager.UpdateCompletionRateUI(finalCompletionRate, currentSlotIndex);
 
             // Ýþçi sayýsýný güncelle
             UpdateWorkerCounts();
@@ -97,7 +128,7 @@ public class WorkerAssignmentPanelManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Yeterli iþçi yok.");
+            Debug.Log("Yeterli mühendis veya iþçi yok.");
         }
     }
 

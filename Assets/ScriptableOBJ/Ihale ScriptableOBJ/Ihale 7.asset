@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ihaleAdi: "Trafik Sinyalizasyon Sistemi \u0130halesi"
   ihaleFiyati: 60000
-  gerekliIsciler: 0
-  gerekliMuhendisler: 0
+  gerekliIsciler: 6
+  gerekliMuhendisler: 4
   ekucretler: 30000
+  gerceklesmeOrani: 45.3

@@ -9,7 +9,7 @@ public class DriveCar : MonoBehaviour
 
     public GameObject prometheus;
     public GameObject carMesh;
-
+    public GameObject karakterUI;
 
     private bool playerInRange = false;
     private bool playerInCar = false;
@@ -43,6 +43,7 @@ public class DriveCar : MonoBehaviour
             Player.SetActive(false);
             prometheus.SetActive(true);
             carMesh.SetActive(false);
+            karakterUI.SetActive(false);
 
             playerInCar = true;
 
@@ -63,6 +64,7 @@ public class DriveCar : MonoBehaviour
             prometheus.SetActive(false);
             carMesh.SetActive(true);
             playerInCar = false;
+            karakterUI.SetActive(true);
 
         }
     }

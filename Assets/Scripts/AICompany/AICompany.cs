@@ -6,18 +6,18 @@ public class AICompany : MonoBehaviour
 {
     public AICompanyData aiCompanyData;
     public List<IhaleData> availableIhaleler;
-    public float checkInterval = 10f; // AI'nin ihaleleri kontrol etme sýklýðý
-    public float workerAdjustmentInterval = 30f; // AI'nin iþçi sayýsýný ayarlama sýklýðý
+    public float checkInterval = 10f; // Kaç saniyede bir kontrol etsin. (Ihaleler)
+    public float workerAdjustmentInterval = 30f; // AI kaç saniyede bir iþcilerini düzenlesin.
     public int workerCost = 5000; // Her iþçi için maliyet
-    public int workerMaintenanceCost = 1000; // Her 30 saniyede her iþçi için maliyet
+    public int workerMaintenanceCost = 1000; // Ýþcilerin saatlik parasý.
     public int maxWorkerAdjustment = 3; // Her seferinde maksimum ayarlanabilir iþçi sayýsý
     private System.Random random = new System.Random();
 
     void Start()
     {
         StartCoroutine(CheckForIhalesRoutine());
-        StartCoroutine(EvaluateAndPurchaseBestIhaleRoutine());
         StartCoroutine(PayWorkerMaintenanceRoutine());
+        StartCoroutine(AdjustWorkersRoutine());
     }
 
     IEnumerator CheckForIhalesRoutine()
@@ -29,12 +29,12 @@ public class AICompany : MonoBehaviour
         }
     }
 
-    IEnumerator EvaluateAndPurchaseBestIhaleRoutine()
+    IEnumerator AdjustWorkersRoutine()
     {
         while (true)
         {
             yield return new WaitForSeconds(workerAdjustmentInterval);
-            EvaluateAndPurchaseBestIhale();
+            AdjustWorkers();
         }
     }
 
@@ -47,37 +47,42 @@ public class AICompany : MonoBehaviour
         }
     }
 
-    void EvaluateAndPurchaseBestIhale()
+    void AdjustWorkers()
     {
-        IhaleData bestIhale = SelectBestIhale();
+        IhaleData bestIhale = FindAffordableIhale();
         if (bestIhale != null)
         {
-            int requiredWorkers = bestIhale.gerekliIsciler;
-            int requiredAdditionalWorkers = requiredWorkers - aiCompanyData.totalWorkers;
+            int requiredWorkers = bestIhale.gerekliIsciler + bestIhale.gerekliMuhendisler;
+            int currentWorkers = aiCompanyData.totalWorkers;
+            int neededWorkers = requiredWorkers - currentWorkers;
 
-            if (requiredAdditionalWorkers > 0)
+            if (neededWorkers > 0)
             {
-                int turnsToHire = Mathf.CeilToInt((float)requiredAdditionalWorkers / maxWorkerAdjustment);
-                float totalAdditionalCost = requiredAdditionalWorkers * workerCost;
-                float totalMaintenanceCost = CalculateTotalMaintenanceCost(turnsToHire, requiredWorkers);
-                float expectedProfit = CalculateIhaleScore(bestIhale) * (bestIhale.ihaleFiyati * 1.5f);
-                float totalCost = totalAdditionalCost + totalMaintenanceCost;
-                float expectedNetProfit = expectedProfit - totalCost;
+                int workersToHire = Mathf.Min(neededWorkers, maxWorkerAdjustment);
+                float totalCost = workersToHire * workerCost + bestIhale.ihaleFiyati;
 
-                if (expectedNetProfit > 0 && aiCompanyData.totalMoney >= totalCost)
+                if (aiCompanyData.totalMoney >= totalCost)
                 {
-                    PurchaseIhale(bestIhale);
-                }
-                else
-                {
-                    bestIhale = FindAffordableIhale();
-                    if (bestIhale != null)
-                    {
-                        PurchaseIhale(bestIhale);
-                    }
+                    aiCompanyData.totalMoney -= workersToHire * workerCost;
+                    aiCompanyData.totalWorkers += workersToHire;
+                    Debug.Log($"AI '{aiCompanyData.companyName}' {workersToHire} iþçi iþe aldý. Toplam iþçi sayýsý: {aiCompanyData.totalWorkers}");
                 }
             }
             else
+            {
+                int workersToFire = Mathf.Min(-neededWorkers, maxWorkerAdjustment);
+                aiCompanyData.totalWorkers -= workersToFire;
+                Debug.Log($"AI '{aiCompanyData.companyName}' {workersToFire} iþçi iþten çýkardý. Toplam iþçi sayýsý: {aiCompanyData.totalWorkers}");
+            }
+        }
+    }
+
+    void EvaluateAndPurchaseBestIhale()
+    {
+        IhaleData bestIhale = FindAffordableIhale();
+        if (bestIhale != null)
+        {
+            if (CanAffordIhale(bestIhale))
             {
                 PurchaseIhale(bestIhale);
             }
@@ -91,7 +96,7 @@ public class AICompany : MonoBehaviour
 
         foreach (IhaleData ihale in availableIhaleler)
         {
-            int requiredWorkers = ihale.gerekliIsciler;
+            int requiredWorkers = ihale.gerekliIsciler + ihale.gerekliMuhendisler;
             int requiredAdditionalWorkers = requiredWorkers - aiCompanyData.totalWorkers;
             int turnsToHire = Mathf.CeilToInt((float)requiredAdditionalWorkers / maxWorkerAdjustment);
             float totalAdditionalCost = requiredAdditionalWorkers * workerCost;
@@ -100,7 +105,7 @@ public class AICompany : MonoBehaviour
             float totalCost = totalAdditionalCost + totalMaintenanceCost;
             float expectedNetProfit = expectedProfit - totalCost;
 
-            if (expectedNetProfit > 0 && aiCompanyData.totalMoney >= totalCost)
+            if (expectedNetProfit > 0 && aiCompanyData.totalMoney >= totalCost + ihale.ihaleFiyati)
             {
                 if (expectedNetProfit > bestScore)
                 {
@@ -162,7 +167,7 @@ public class AICompany : MonoBehaviour
     {
         float successChance = ihale.gerceklesmeOrani / 100f;
         float potentialProfit = ihale.ihaleFiyati * 1.5f;
-        int requiredWorkers = ihale.gerekliIsciler;
+        int requiredWorkers = ihale.gerekliIsciler + ihale.gerekliMuhendisler;
 
         // Ýþçi baþýna %5 baþarý artýþý
         successChance += requiredWorkers * 0.05f;
@@ -177,13 +182,13 @@ public class AICompany : MonoBehaviour
         switch (aiCompanyData.difficultyLevel)
         {
             case 2:
-                score *= Random.Range(0.9f, 1.1f);
+                score *= (float)random.NextDouble() * 0.2f + 0.9f; // Random.Range(0.9f, 1.1f)
                 break;
             case 3:
-                score *= Random.Range(0.8f, 1.2f);
+                score *= (float)random.NextDouble() * 0.4f + 0.8f; // Random.Range(0.8f, 1.2f)
                 break;
             case 4:
-                score *= Random.Range(0.7f, 1.3f);
+                score *= (float)random.NextDouble() * 0.6f + 0.7f; // Random.Range(0.7f, 1.3f)
                 break;
             default:
                 // 1. seviye için herhangi bir hata yok
@@ -194,12 +199,13 @@ public class AICompany : MonoBehaviour
 
     bool CanAffordIhale(IhaleData ihale)
     {
-        return aiCompanyData.totalMoney >= ihale.ihaleFiyati && aiCompanyData.totalWorkers >= ihale.gerekliIsciler;
+        int requiredTotalWorkers = ihale.gerekliIsciler + ihale.gerekliMuhendisler;
+        return aiCompanyData.totalMoney >= ihale.ihaleFiyati && aiCompanyData.totalWorkers >= requiredTotalWorkers;
     }
 
     void PurchaseIhale(IhaleData ihale)
     {
-        int requiredWorkers = ihale.gerekliIsciler;
+        int requiredWorkers = ihale.gerekliIsciler + ihale.gerekliMuhendisler;
         int requiredAdditionalWorkers = requiredWorkers - aiCompanyData.totalWorkers;
 
         if (requiredAdditionalWorkers > 0)
@@ -220,14 +226,17 @@ public class AICompany : MonoBehaviour
         availableIhaleler.Remove(ihale); // Alýnan ihaleyi availableIhaleler listesinden çýkar
         Debug.Log($"AI '{aiCompanyData.companyName}' '{ihale.ihaleAdi}' ihaleyi satýn aldý ve iþçileri atadý.");
 
+        // Ýþçileri ihaleye ata
+        AssignWorkersForIhale(ihale);
+
         // Ýhalenin baþarýsýný deðerlendir
-        EvaluateIhaleResult(ihale, ihale.gerekliIsciler);
+        EvaluateIhaleResult(ihale, ihale.gerekliIsciler + ihale.gerekliMuhendisler);
     }
 
     void EvaluateIhaleResult(IhaleData ihale, int assignedWorkers)
     {
         float successChance = ihale.gerceklesmeOrani / 100f;
-        successChance += assignedWorkers * 0.02f; // Her iþçi için %5 artýþ
+        successChance += assignedWorkers * 0.02f; // Her iþçi için %2 artýþ
 
         Debug.Log($"AI '{aiCompanyData.companyName}' '{ihale.ihaleAdi}' için baþarý yüzdesi: {successChance * 100}%");
 
@@ -247,9 +256,10 @@ public class AICompany : MonoBehaviour
 
     bool AssignWorkersForIhale(IhaleData ihale)
     {
-        if (aiCompanyData.totalWorkers >= ihale.gerekliIsciler)
+        int requiredTotalWorkers = ihale.gerekliIsciler + ihale.gerekliMuhendisler;
+        if (aiCompanyData.totalWorkers >= requiredTotalWorkers)
         {
-            aiCompanyData.totalWorkers -= ihale.gerekliIsciler;
+            aiCompanyData.totalWorkers -= requiredTotalWorkers;
             return true;
         }
         else
