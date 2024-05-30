@@ -13,8 +13,16 @@ MonoBehaviour:
   m_Name: AI_3
   m_EditorClassIdentifier: 
   companyName: "Ko\xE7 Holding"
-  totalMoney: 180000
-  totalWorkers: 9
+  totalMoney: -228500
+  totalWorkers: 12
   purchasedIhaleler:
+  - {fileID: 11400000, guid: aeb0bf4be414c144da59bc31a9f95f65, type: 2}
+  - {fileID: 11400000, guid: aeb0bf4be414c144da59bc31a9f95f65, type: 2}
   - {fileID: 11400000, guid: 2884ba87c8a9ff44d850ed14ab89cfb5, type: 2}
+  - {fileID: 11400000, guid: efca48af5f3c70846b3eeee3128b081b, type: 2}
+  - {fileID: 11400000, guid: 578383ac92664364ead14a0dafe7903f, type: 2}
+  - {fileID: 11400000, guid: 9a2e49b0765a2894e9a98ffae38226aa, type: 2}
+  - {fileID: 11400000, guid: 25aeb8061a6db444da70b0fd67b1ef96, type: 2}
+  - {fileID: 11400000, guid: 528e21ef7e86adc4b90e39aa207276fb, type: 2}
+  - {fileID: 11400000, guid: cf9efda97076048cf832dd103ee7f4fd, type: 2}
   difficultyLevel: 3

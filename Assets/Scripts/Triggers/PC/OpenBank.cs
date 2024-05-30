@@ -12,6 +12,11 @@ public class OpenBank : MonoBehaviour
     public GameObject UseBanka;
     public GameObject bankaCamera;
 
+    public GameObject bankaUI;
+
+    public GameObject pcUI;
+    public GameObject pcCamera;
+
     private bool playerInRange = false;
 
     private void Update()
@@ -22,7 +27,9 @@ public class OpenBank : MonoBehaviour
             bankaCamera.SetActive(true);
             BankaOpened();
 
-
+            bankaUI.SetActive(true);
+            pcCamera.SetActive(false);
+            pcUI.SetActive(false);
             
         }
     }
@@ -58,6 +65,7 @@ public class OpenBank : MonoBehaviour
 
     public void BankaClosed()
     {
+        bankaUI.SetActive(false);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         Player.SetActive(true);

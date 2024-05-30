@@ -20,6 +20,9 @@ public class OpenPC : MonoBehaviour
 
     public GameObject hirePanel;
 
+    public GameObject bankaUI;
+    public GameObject bankaKamera;
+
     private bool playerInRange = false;
     private void OnTriggerEnter(Collider other)
     {
@@ -43,6 +46,8 @@ public class OpenPC : MonoBehaviour
             pcCamera.SetActive(true);
             PcOpened();
 
+            bankaKamera.SetActive(false);
+            bankaUI.SetActive(false);
             
             currentPara.SetActive(true);
         }
