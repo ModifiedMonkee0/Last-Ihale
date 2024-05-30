@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ihale 40
   m_EditorClassIdentifier: 
   ihaleAdi: "Y\xFCksek H\u0131zl\u0131 Tren Hatt\u0131 \u0130halesi "
-  ihaleFiyati: 500000000
-  gerekliIsciler: 0
-  gerekliMuhendisler: 0
+  ihaleFiyati: 1000000
+  gerekliIsciler: 15
+  gerekliMuhendisler: 5
   ekucretler: 250000000
+  gerceklesmeOrani: 30

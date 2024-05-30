@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ihale 43
   m_EditorClassIdentifier: 
   ihaleAdi: "Gaz Da\u011F\u0131t\u0131m Sistemi \u0130halesi"
-  ihaleFiyati: 35000000
-  gerekliIsciler: 0
-  gerekliMuhendisler: 0
+  ihaleFiyati: 100000000
+  gerekliIsciler: 30
+  gerekliMuhendisler: 10
   ekucretler: 17500000
+  gerceklesmeOrani: 15

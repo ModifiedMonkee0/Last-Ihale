@@ -72,6 +72,39 @@ public class PlayerData : MonoBehaviour
         return false;
     }
 
+    public bool SellWorker(WorkerData worker)
+    {
+        // Ýþçi türüne göre sayýyý azalt ve toplam saatlik ücreti güncelle
+        if (worker is GoodEngineer && goodEngineerData.count > 0)
+        {
+            goodEngineerData.count--;
+        }
+        else if (worker is BadEngineer && badEngineerData.count > 0)
+        {
+            badEngineerData.count--;
+        }
+        else if (worker is GoodWorker && goodWorkerData.count > 0)
+        {
+            goodWorkerData.count--;
+        }
+        else if (worker is BadWorker && badWorkerData.count > 0)
+        {
+            badWorkerData.count--;
+        }
+        else
+        {
+            Debug.Log("Satýlacak iþçi yok: " + worker.workerName);
+            return false;
+        }
+
+        workerCount--;
+        totalHourlyWage -= worker.hourlyWage;
+        currentMoney += worker.satýþFiyatý;
+
+        SaveData();
+        return true;
+    }
+
     public void PayWorkers()
     {
         if (currentMoney >= totalHourlyWage)
@@ -87,8 +120,7 @@ public class PlayerData : MonoBehaviour
         }
     }
 
-
-    //kredi iþlemleri
+    // kredi iþlemleri
     public void TakeLoan(float amount, float interestRate, float repaymentTime)
     {
         currentMoney += amount;

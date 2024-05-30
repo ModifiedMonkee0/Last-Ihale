@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ihale 20
   m_EditorClassIdentifier: 
   ihaleAdi: "T\xFCnel Kaz\u0131 \u0130halesi"
-  ihaleFiyati: 15000000
-  gerekliIsciler: 0
-  gerekliMuhendisler: 0
+  ihaleFiyati: 1000000
+  gerekliIsciler: 15
+  gerekliMuhendisler: 5
   ekucretler: 7500000
+  gerceklesmeOrani: 55

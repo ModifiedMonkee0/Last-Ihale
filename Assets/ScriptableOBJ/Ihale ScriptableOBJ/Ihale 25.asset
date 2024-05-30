@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ihale 25
   m_EditorClassIdentifier: 
   ihaleAdi: "At\u0131k Su Ar\u0131tma Tesisi \u0130halesi"
-  ihaleFiyati: 4500000
-  gerekliIsciler: 0
-  gerekliMuhendisler: 0
+  ihaleFiyati: 2000000
+  gerekliIsciler: 15
+  gerekliMuhendisler: 8
   ekucretler: 2750000
+  gerceklesmeOrani: 47.6

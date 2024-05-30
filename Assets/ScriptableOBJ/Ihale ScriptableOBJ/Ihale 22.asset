@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ihale 22
   m_EditorClassIdentifier: 
   ihaleAdi: "Kanalizasyon Sistemi \u0130halesi "
-  ihaleFiyati: 3500000
-  gerekliIsciler: 0
-  gerekliMuhendisler: 0
+  ihaleFiyati: 1200000
+  gerekliIsciler: 13
+  gerekliMuhendisler: 5
   ekucretler: 1750000
+  gerceklesmeOrani: 50

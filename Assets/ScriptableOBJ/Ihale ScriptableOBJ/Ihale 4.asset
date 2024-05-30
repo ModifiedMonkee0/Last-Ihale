@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ihaleAdi: " Asfaltlama \u0130halesi"
   ihaleFiyati: 75000
-  gerekliIsciler: 12
+  gerekliIsciler: 3
   gerekliMuhendisler: 1
   ekucretler: 37500
-  gerceklesmeOrani: 44.2
+  gerceklesmeOrani: 88

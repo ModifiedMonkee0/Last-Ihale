@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BadEngineer
   workerName: "K\xF6t\xFC M\xFChendis"
   hiringCost: 2500
-  hourlyWage: 7500
-  workerScore: 8
-  count: 0
+  hourlyWage: 2000
+  workerScore: 1.5
+  "sat\u0131\u015FFiyat\u0131": 0
+  count: 3

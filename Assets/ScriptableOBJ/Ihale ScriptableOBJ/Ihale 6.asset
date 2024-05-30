@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ihaleAdi: "Yang\u0131n S\xF6nd\xFCrme Sistemi \u0130halesi"
   ihaleFiyati: 50000
-  gerekliIsciler: 12
-  gerekliMuhendisler: 5
+  gerekliIsciler: 4
+  gerekliMuhendisler: 1
   ekucretler: 25000
-  gerceklesmeOrani: 51.4
+  gerceklesmeOrani: 90

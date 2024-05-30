@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ihale 26
   m_EditorClassIdentifier: 
   ihaleAdi: "Tren Gar\u0131 \u0130n\u015Faat \u0130halesi"
-  ihaleFiyati: 7000000
-  gerekliIsciler: 0
-  gerekliMuhendisler: 0
+  ihaleFiyati: 2400000
+  gerekliIsciler: 16
+  gerekliMuhendisler: 5
   ekucretler: 3500000
+  gerceklesmeOrani: 50

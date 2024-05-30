@@ -6,7 +6,8 @@ public class WorkerData : ScriptableObject
     public string workerName;
     public float hiringCost;        // Satýn alýrken ödenmesi gereken para
     public float hourlyWage;        // Ýþçiye saatlik olarak ödenmesi gereken para
-    public float workerScore;       //iþcinin gücü
+    public float workerScore;
+    public float satýþFiyatý;       //Ýþçiyi iþten cýkartýrken? Neden para kazanalým ki 
 }
 
 [CreateAssetMenu(fileName = "GoodEngineer", menuName = "Workers/GoodEngineer")]

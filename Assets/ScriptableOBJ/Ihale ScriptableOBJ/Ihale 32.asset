@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ihale 32
   m_EditorClassIdentifier: 
   ihaleAdi: "End\xFCstriyel Tesis \u0130n\u015Faat \u0130halesi"
-  ihaleFiyati: 150000000
-  gerekliIsciler: 0
-  gerekliMuhendisler: 0
+  ihaleFiyati: 2000000
+  gerekliIsciler: 15
+  gerekliMuhendisler: 10
   ekucretler: 75000000
+  gerceklesmeOrani: 25

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ihale 41
   m_EditorClassIdentifier: 
   ihaleAdi: "Telekom\xFCnikasyon Altyap\u0131s\u0131 \u0130halesi"
-  ihaleFiyati: 25000000
-  gerekliIsciler: 0
-  gerekliMuhendisler: 0
+  ihaleFiyati: 2000000
+  gerekliIsciler: 20
+  gerekliMuhendisler: 8
   ekucretler: 12500000
+  gerceklesmeOrani: 25.7

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ihaleAdi: "Otoyol Geni\u015Fletme \u0130halesi "
   ihaleFiyati: 50000000
-  gerekliIsciler: 0
-  gerekliMuhendisler: 0
+  gerekliIsciler: 25
+  gerekliMuhendisler: 15
   ekucretler: 25000000
+  gerceklesmeOrani: 0

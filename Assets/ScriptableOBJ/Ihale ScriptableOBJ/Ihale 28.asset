@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ihale 28
   m_EditorClassIdentifier: 
   ihaleAdi: "Liman \u0130n\u015Faat \u0130halesi "
-  ihaleFiyati: 30000000
-  gerekliIsciler: 0
-  gerekliMuhendisler: 0
+  ihaleFiyati: 1100000
+  gerekliIsciler: 15
+  gerekliMuhendisler: 5
   ekucretler: 15000000
+  gerceklesmeOrani: 45

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ihaleAdi: "Yaya K\xF6pr\xFCs\xFC \u0130n\u015Faat \u0130halesi"
   ihaleFiyati: 150000
-  gerekliIsciler: 9
-  gerekliMuhendisler: 6
+  gerekliIsciler: 6
+  gerekliMuhendisler: 2
   ekucretler: 75000
-  gerceklesmeOrani: 51.6
+  gerceklesmeOrani: 74

@@ -12,10 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3836ac61f841e9f499afbc061b66b4fc, type: 3}
   m_Name: AI_1
   m_EditorClassIdentifier: 
-  companyName: Crazy Games
-  totalMoney: 143000
-  totalWorkers: 0
-  purchasedIhaleler:
-  - {fileID: 11400000, guid: 578383ac92664364ead14a0dafe7903f, type: 2}
-  - {fileID: 11400000, guid: 578383ac92664364ead14a0dafe7903f, type: 2}
+  companyName: "G\xFC\xE7l\xFC"
+  totalMoney: 500000
+  totalWorkers: 12
+  purchasedIhaleler: []
   difficultyLevel: 1

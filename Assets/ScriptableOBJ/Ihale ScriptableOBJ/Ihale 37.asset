@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ihale 37
   m_EditorClassIdentifier: 
   ihaleAdi: "Y\xFCksek Katl\u0131 Bina \u0130n\u015Faat \u0130halesi"
-  ihaleFiyati: 200000000
-  gerekliIsciler: 0
-  gerekliMuhendisler: 0
+  ihaleFiyati: 7000000
+  gerekliIsciler: 30
+  gerekliMuhendisler: 15
   ekucretler: 100000000
+  gerceklesmeOrani: 0

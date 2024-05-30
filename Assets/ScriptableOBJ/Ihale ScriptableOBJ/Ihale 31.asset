@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ihaleAdi: "Havaalan\u0131 Terminal Binas\u0131 \u0130halesi"
   ihaleFiyati: 200000000
-  gerekliIsciler: 0
-  gerekliMuhendisler: 0
+  gerekliIsciler: 20
+  gerekliMuhendisler: 20
   ekucretler: 1000000000
+  gerceklesmeOrani: 22.2

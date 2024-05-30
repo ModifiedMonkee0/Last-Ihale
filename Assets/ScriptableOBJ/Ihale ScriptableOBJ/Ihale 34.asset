@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ihale 34
   m_EditorClassIdentifier: 
   ihaleAdi: "R\xFCzgar Enerji Santrali \u0130halesi"
-  ihaleFiyati: 50000000
-  gerekliIsciler: 0
-  gerekliMuhendisler: 0
+  ihaleFiyati: 25000000
+  gerekliIsciler: 20
+  gerekliMuhendisler: 15
   ekucretler: 25000000
+  gerceklesmeOrani: 30

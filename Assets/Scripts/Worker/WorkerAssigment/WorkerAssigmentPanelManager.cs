@@ -132,7 +132,7 @@ public class WorkerAssignmentPanelManager : MonoBehaviour
         }
     }
 
-    private void UpdateWorkerCounts()
+    public void UpdateWorkerCounts()
     {
         goodEngineerCountText.text = ("Ýyi Mühendis: " + playerData.goodEngineerData.count.ToString());
         badEngineerCountText.text = ("Kötü Mühendis:" + playerData.badEngineerData.count.ToString());

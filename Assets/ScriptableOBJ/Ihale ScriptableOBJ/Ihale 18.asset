@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ihale 18
   m_EditorClassIdentifier: 
   ihaleAdi: "Yurt \u0130n\u015Faat \u0130halesi"
-  ihaleFiyati: 1000000
-  gerekliIsciler: 0
-  gerekliMuhendisler: 0
+  ihaleFiyati: 930000
+  gerekliIsciler: 12
+  gerekliMuhendisler: 5
   ekucretler: 500000
+  gerceklesmeOrani: 70

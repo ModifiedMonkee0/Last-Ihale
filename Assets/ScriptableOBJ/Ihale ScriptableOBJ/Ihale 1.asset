@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ihaleAdi: "Park ve Bah\xE7e D\xFCzenleme \u0130halesi"
   ihaleFiyati: 50000
-  gerekliIsciler: 2
-  gerekliMuhendisler: 2
+  gerekliIsciler: 1
+  gerekliMuhendisler: 1
   ekucretler: 25000
-  gerceklesmeOrani: 70.3
+  gerceklesmeOrani: 95.2

@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3836ac61f841e9f499afbc061b66b4fc, type: 3}
   m_Name: AI_2
   m_EditorClassIdentifier: 
-  companyName: "Ni\u015Fanta\u015F\u0131 \xDCni"
-  totalMoney: 1183000
+  companyName: "Az g\xFC\xE7l\xFC"
+  totalMoney: 600000
   totalWorkers: 9
-  purchasedIhaleler:
-  - {fileID: 11400000, guid: 25aeb8061a6db444da70b0fd67b1ef96, type: 2}
+  purchasedIhaleler: []
   difficultyLevel: 2

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ihaleAdi: "\u0130\xE7me Suyu \u015Eebekesi \u0130halesi "
   ihaleFiyati: 250000
-  gerekliIsciler: 0
-  gerekliMuhendisler: 0
+  gerekliIsciler: 5
+  gerekliMuhendisler: 2
   ekucretler: 125000
+  gerceklesmeOrani: 78

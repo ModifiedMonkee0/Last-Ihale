@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ihale 29
   m_EditorClassIdentifier: 
   ihaleAdi: "Baraj \u0130n\u015Faat \u0130halesi"
-  ihaleFiyati: 100000000
-  gerekliIsciler: 0
-  gerekliMuhendisler: 0
+  ihaleFiyati: 1700000
+  gerekliIsciler: 16
+  gerekliMuhendisler: 6
   ekucretler: 50000000
+  gerceklesmeOrani: 50

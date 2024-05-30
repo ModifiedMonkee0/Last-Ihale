@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ihale 16
   m_EditorClassIdentifier: 
   ihaleAdi: "Elektrik Santrali \u0130n\u015Faat \u0130halesi"
-  ihaleFiyati: 10000000
-  gerekliIsciler: 0
-  gerekliMuhendisler: 0
+  ihaleFiyati: 850000
+  gerekliIsciler: 13
+  gerekliMuhendisler: 5
   ekucretler: 5000000
+  gerceklesmeOrani: 55

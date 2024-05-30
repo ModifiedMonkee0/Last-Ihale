@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ihale 15
   m_EditorClassIdentifier: 
   ihaleAdi: "\xDCniversite Kamp\xFCs\xFC \u0130n\u015Faat \u0130halesi"
-  ihaleFiyati: 8000000
-  gerekliIsciler: 0
-  gerekliMuhendisler: 0
+  ihaleFiyati: 800000
+  gerekliIsciler: 13
+  gerekliMuhendisler: 5
   ekucretler: 4000000
+  gerceklesmeOrani: 60.2

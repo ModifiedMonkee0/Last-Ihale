@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ihaleAdi: "Su Deposu \u0130n\u015Faat \u0130halesi"
   ihaleFiyati: 10000000
-  gerekliIsciler: 0
-  gerekliMuhendisler: 0
+  gerekliIsciler: 30
+  gerekliMuhendisler: 8
   ekucretler: 5000000
+  gerceklesmeOrani: 10

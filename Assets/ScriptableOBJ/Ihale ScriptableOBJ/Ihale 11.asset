@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ihale 11
   m_EditorClassIdentifier: 
   ihaleAdi: "Okul Binas\u0131 \u0130n\u015Faat \u0130halesi"
-  ihaleFiyati: 1200000
-  gerekliIsciler: 0
-  gerekliMuhendisler: 0
+  ihaleFiyati: 250000
+  gerekliIsciler: 6
+  gerekliMuhendisler: 3
   ekucretler: 600000
+  gerceklesmeOrani: 75.1

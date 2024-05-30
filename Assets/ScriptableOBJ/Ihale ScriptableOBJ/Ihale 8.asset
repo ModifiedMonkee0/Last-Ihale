@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ihaleAdi: "K\xFClt\xFCr Merkezi \u0130n\u015Faat \u0130halesi"
   ihaleFiyati: 300000
-  gerekliIsciler: 0
-  gerekliMuhendisler: 0
+  gerekliIsciler: 8
+  gerekliMuhendisler: 3
   ekucretler: 150000
+  gerceklesmeOrani: 65.7

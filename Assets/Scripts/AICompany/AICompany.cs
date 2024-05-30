@@ -170,7 +170,7 @@ public class AICompany : MonoBehaviour
         int requiredWorkers = ihale.gerekliIsciler + ihale.gerekliMuhendisler;
 
         // Ýþçi baþýna %5 baþarý artýþý
-        successChance += requiredWorkers * 0.05f;
+        successChance += requiredWorkers * 0.02f;
 
         // Karlýlýk skoru hesaplama (potansiyel kar * baþarý þansý)
         return potentialProfit * successChance - ihale.ihaleFiyati;

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ihaleAdi: "Deprem G\xFC\xE7lendirme \u0130halesi"
   ihaleFiyati: 400000
-  gerekliIsciler: 0
-  gerekliMuhendisler: 0
+  gerekliIsciler: 4
+  gerekliMuhendisler: 3
   ekucretler: 200000
+  gerceklesmeOrani: 75.5

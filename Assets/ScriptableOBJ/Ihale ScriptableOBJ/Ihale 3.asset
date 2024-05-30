@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ihaleAdi: "Bisiklet Yolu \u0130n\u015Faat \u0130halesi"
   ihaleFiyati: 100000
-  gerekliIsciler: 12
-  gerekliMuhendisler: 4
+  gerekliIsciler: 4
+  gerekliMuhendisler: 1
   ekucretler: 50000
-  gerceklesmeOrani: 62.8
+  gerceklesmeOrani: 85

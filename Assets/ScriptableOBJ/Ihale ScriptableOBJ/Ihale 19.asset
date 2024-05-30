@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ihale 19
   m_EditorClassIdentifier: 
   ihaleAdi: "Spor Kompleksi \u0130n\u015Faat \u0130halesi"
-  ihaleFiyati: 4000000
-  gerekliIsciler: 0
-  gerekliMuhendisler: 0
-  ekucretler: 2000000
+  ihaleFiyati: 70000
+  gerekliIsciler: 5
+  gerekliMuhendisler: 1
+  ekucretler: 35000
+  gerceklesmeOrani: 88

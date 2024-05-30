@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ihale 12
   m_EditorClassIdentifier: 
   ihaleAdi: "Hastane \u0130n\u015Faat \u0130halesi"
-  ihaleFiyati: 2500000
-  gerekliIsciler: 0
-  gerekliMuhendisler: 0
+  ihaleFiyati: 300000
+  gerekliIsciler: 5
+  gerekliMuhendisler: 3
   ekucretler: 125000
+  gerceklesmeOrani: 84
