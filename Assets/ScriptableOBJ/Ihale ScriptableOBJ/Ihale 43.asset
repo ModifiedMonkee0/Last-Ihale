@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78763599bbd53d4f88de6110df58025, type: 3}
   m_Name: Ihale 43
   m_EditorClassIdentifier: 
-  ihaleAdi: "Gaz Da\u011F\u0131t\u0131m Sistemi \u0130halesi"
+  ihaleAdi: Urban Development Project
   ihaleFiyati: 100000000
   gerekliIsciler: 30
   gerekliMuhendisler: 10

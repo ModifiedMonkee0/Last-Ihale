@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78763599bbd53d4f88de6110df58025, type: 3}
   m_Name: Ihale 21
   m_EditorClassIdentifier: 
-  ihaleAdi: "Su Ar\u0131tma Tesisi \u0130halesi"
+  ihaleAdi: Sports Complex
   ihaleFiyati: 540000
   gerekliIsciler: 10
   gerekliMuhendisler: 5

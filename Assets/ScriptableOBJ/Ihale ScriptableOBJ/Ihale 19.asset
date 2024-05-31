@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78763599bbd53d4f88de6110df58025, type: 3}
   m_Name: Ihale 19
   m_EditorClassIdentifier: 
-  ihaleAdi: "Spor Kompleksi \u0130n\u015Faat \u0130halesi"
+  ihaleAdi: Factory Renovation
   ihaleFiyati: 70000
   gerekliIsciler: 5
   gerekliMuhendisler: 1

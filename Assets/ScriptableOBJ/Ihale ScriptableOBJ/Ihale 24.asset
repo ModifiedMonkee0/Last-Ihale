@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78763599bbd53d4f88de6110df58025, type: 3}
   m_Name: Ihale 24
   m_EditorClassIdentifier: 
-  ihaleAdi: "Do\u011Falgaz Boru Hatt\u0131 \u0130halesi"
+  ihaleAdi: Medium Warehouse
   ihaleFiyati: 10000000
   gerekliIsciler: 15
   gerekliMuhendisler: 6

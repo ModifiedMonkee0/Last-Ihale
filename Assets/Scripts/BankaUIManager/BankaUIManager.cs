@@ -33,7 +33,7 @@ public class BankaUIManager : MonoBehaviour
 
     private void Update()
     {
-        currentMoney.text = "Þuanki Paran: " + playerData.currentMoney;
+        currentMoney.text = "Current Money " + playerData.currentMoney;
     }
 
     private void IhtiyacKrediAldý()

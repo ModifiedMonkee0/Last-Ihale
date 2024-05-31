@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78763599bbd53d4f88de6110df58025, type: 3}
   m_Name: Ihale 25
   m_EditorClassIdentifier: 
-  ihaleAdi: "At\u0131k Su Ar\u0131tma Tesisi \u0130halesi"
+  ihaleAdi: University Dormitory
   ihaleFiyati: 2000000
   gerekliIsciler: 15
   gerekliMuhendisler: 8

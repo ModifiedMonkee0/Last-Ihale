@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78763599bbd53d4f88de6110df58025, type: 3}
   m_Name: Ihale 14
   m_EditorClassIdentifier: 
-  ihaleAdi: "Toplu Konut Projesi \u0130halesi"
+  ihaleAdi: Small Shopping Center
   ihaleFiyati: 400000
   gerekliIsciler: 12
   gerekliMuhendisler: 5

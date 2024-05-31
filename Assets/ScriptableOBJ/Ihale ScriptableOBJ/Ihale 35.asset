@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78763599bbd53d4f88de6110df58025, type: 3}
   m_Name: Ihale 35
   m_EditorClassIdentifier: 
-  ihaleAdi: "Jeotermal Enerji Santrali \u0130halesi"
+  ihaleAdi: Stadium Construction
   ihaleFiyati: 5000000
   gerekliIsciler: 15
   gerekliMuhendisler: 20

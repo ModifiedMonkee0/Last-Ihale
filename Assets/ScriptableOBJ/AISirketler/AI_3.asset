@@ -12,8 +12,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3836ac61f841e9f499afbc061b66b4fc, type: 3}
   m_Name: AI_3
   m_EditorClassIdentifier: 
-  companyName: "G\xFC\xE7s\xFCz"
-  totalMoney: 7000000
-  totalWorkers: 8
-  purchasedIhaleler: []
+  companyName: "Baran \xC7orap"
+  totalMoney: 77909000
+  totalWorkers: 0
+  purchasedIhaleler:
+  - {fileID: 11400000, guid: 4f15ca19737123b47b243d3ffecbc81d, type: 2}
+  - {fileID: 11400000, guid: 17fb39a50d6b644e8b1da1ee1dbc32f1, type: 2}
+  - {fileID: 11400000, guid: af8b0ad28c7c66744b8ebccf9e845ae6, type: 2}
+  - {fileID: 11400000, guid: 8ed0cbda1cda01444896bcbcae0248ac, type: 2}
+  - {fileID: 11400000, guid: c212950d414b6f14ea8ac3bda522db2d, type: 2}
+  - {fileID: 11400000, guid: 8e887c04cfe9d914b8c499d436d5b9d5, type: 2}
+  - {fileID: 11400000, guid: f8632d9bacbd040a5b18efd786d4dd43, type: 2}
+  - {fileID: 11400000, guid: 86259a512a72a4833a647266bffab6c3, type: 2}
+  - {fileID: 11400000, guid: 89e48efd6a62c489f938e7ac3a7fccb0, type: 2}
+  - {fileID: 11400000, guid: 5328718508ace4d8c9a68fb183a6b384, type: 2}
+  - {fileID: 11400000, guid: 62dc48b4387aa4212b508b17920d6f05, type: 2}
+  - {fileID: 11400000, guid: 6933d69bb13594df8a131f1475101105, type: 2}
+  - {fileID: 11400000, guid: b90a9fc3ae76441ba87d6b08a48f772d, type: 2}
+  - {fileID: 11400000, guid: 5f9e766b02446493db4e837667f9ac9f, type: 2}
+  - {fileID: 11400000, guid: b596aa7c6250741d7b53b6d5c14d2dff, type: 2}
+  - {fileID: 11400000, guid: 9a6be8e34a99341ea988ecfe90dc0d96, type: 2}
+  - {fileID: 11400000, guid: 6320b108d6bed43628314deab7d25af5, type: 2}
+  - {fileID: 11400000, guid: 5890710c6621c42c7b6f5d1bad90d9f4, type: 2}
+  - {fileID: 11400000, guid: 4d2c9db737d42449883a68c3802d458b, type: 2}
+  - {fileID: 11400000, guid: 43ed3c52f311d0d4db22b2210aa1593b, type: 2}
+  - {fileID: 11400000, guid: 3e71854418608429aa297036bf0756b0, type: 2}
+  - {fileID: 11400000, guid: 631359f26aaaf4ad9a4b31bb1cb53ae6, type: 2}
+  - {fileID: 11400000, guid: 9f3ae0259145f489e9a719e0d66620e6, type: 2}
+  - {fileID: 11400000, guid: cf9efda97076048cf832dd103ee7f4fd, type: 2}
+  - {fileID: 11400000, guid: 46a976a6bb99e3549be8b32c9bcccd9a, type: 2}
+  - {fileID: 11400000, guid: 841f1591ed581442496b966992e91271, type: 2}
   difficultyLevel: 3

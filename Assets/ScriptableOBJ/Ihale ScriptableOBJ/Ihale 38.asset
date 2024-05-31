@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78763599bbd53d4f88de6110df58025, type: 3}
   m_Name: Ihale 38
   m_EditorClassIdentifier: 
-  ihaleAdi: "Su Deposu \u0130n\u015Faat \u0130halesi"
+  ihaleAdi: Large Industrial Facility
   ihaleFiyati: 10000000
   gerekliIsciler: 30
   gerekliMuhendisler: 8

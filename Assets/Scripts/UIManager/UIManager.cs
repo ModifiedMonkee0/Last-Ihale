@@ -71,17 +71,17 @@ public class UIManager : MonoBehaviour
     //Karakter UI
     private void Update()
     {
-        currentMoney.text = "Suanki Paran: " + playerData.currentMoney.ToString("C2");
+        currentMoney.text = "Current Money: " + playerData.currentMoney.ToString("C2");
         UpdateHourlyWage();
     }
 
     private void UpdateTimer(float timer)
     {
-        timerText.text = "Sonraki ödeme: " + Mathf.Ceil(timer).ToString() + " saniye";
+        timerText.text = "Next payment: " + Mathf.Ceil(timer).ToString() + " saniye";
     }
 
     private void UpdateHourlyWage()
     {
-        hourlyWage.text = "Saatlik Ücret: " + playerData.totalHourlyWage.ToString("C2");
+        hourlyWage.text = "Hourly wage: " + playerData.totalHourlyWage.ToString("C2");
     }
 }

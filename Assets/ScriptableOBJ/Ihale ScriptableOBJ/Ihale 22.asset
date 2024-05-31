@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78763599bbd53d4f88de6110df58025, type: 3}
   m_Name: Ihale 22
   m_EditorClassIdentifier: 
-  ihaleAdi: "Kanalizasyon Sistemi \u0130halesi "
+  ihaleAdi: Office Building Construction
   ihaleFiyati: 1200000
   gerekliIsciler: 13
   gerekliMuhendisler: 5

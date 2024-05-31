@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78763599bbd53d4f88de6110df58025, type: 3}
   m_Name: Ihale 18
   m_EditorClassIdentifier: 
-  ihaleAdi: "Yurt \u0130n\u015Faat \u0130halesi"
+  ihaleAdi: Hospital Wing Addition
   ihaleFiyati: 930000
   gerekliIsciler: 12
   gerekliMuhendisler: 5

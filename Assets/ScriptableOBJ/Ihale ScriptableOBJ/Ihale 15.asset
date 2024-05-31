@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78763599bbd53d4f88de6110df58025, type: 3}
   m_Name: Ihale 15
   m_EditorClassIdentifier: 
-  ihaleAdi: "\xDCniversite Kamp\xFCs\xFC \u0130n\u015Faat \u0130halesi"
+  ihaleAdi: Mid-Size Office Building
   ihaleFiyati: 800000
   gerekliIsciler: 13
   gerekliMuhendisler: 5

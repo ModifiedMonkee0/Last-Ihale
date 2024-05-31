@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78763599bbd53d4f88de6110df58025, type: 3}
   m_Name: Ihale 6
   m_EditorClassIdentifier: 
-  ihaleAdi: "Yang\u0131n S\xF6nd\xFCrme Sistemi \u0130halesi"
+  ihaleAdi: Duplex Construction
   ihaleFiyati: 50000
   gerekliIsciler: 4
   gerekliMuhendisler: 1

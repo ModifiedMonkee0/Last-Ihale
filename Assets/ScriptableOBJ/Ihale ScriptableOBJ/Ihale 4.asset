@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78763599bbd53d4f88de6110df58025, type: 3}
   m_Name: Ihale 4
   m_EditorClassIdentifier: 
-  ihaleAdi: " Asfaltlama \u0130halesi"
+  ihaleAdi: Small Apartment Renovation
   ihaleFiyati: 75000
   gerekliIsciler: 3
   gerekliMuhendisler: 1

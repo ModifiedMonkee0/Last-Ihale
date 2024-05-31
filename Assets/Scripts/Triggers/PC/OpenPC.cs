@@ -37,7 +37,7 @@ public class OpenPC : MonoBehaviour
 
     private void Update()
     {
-       currentMoney.text = "Suanki Paran: " + playerData.currentMoney.ToString("C2");
+       currentMoney.text = "Current Money: " + playerData.currentMoney.ToString("C2");
 
         //ınput manager?
         if (Input.GetKeyDown(KeyCode.E) && playerInRange)

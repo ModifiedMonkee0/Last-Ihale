@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: BadEngineer
   m_EditorClassIdentifier: Assembly-CSharp::BadEngineer
-  workerName: "K\xF6t\xFC M\xFChendis"
+  workerName: Bad Engineer
   hiringCost: 2500
   hourlyWage: 2000
   workerScore: 1.5
   "sat\u0131\u015FFiyat\u0131": 0
-  count: 3
+  count: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: BadWorker
   m_EditorClassIdentifier: Assembly-CSharp::BadWorker
-  workerName: "K\xF6t\xFC \u0130\u015Fci"
+  workerName: Bad Worker
   hiringCost: 300
   hourlyWage: 300
   workerScore: 0.5

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78763599bbd53d4f88de6110df58025, type: 3}
   m_Name: Ihale 23
   m_EditorClassIdentifier: 
-  ihaleAdi: "\u0130\xE7me Suyu \u015Eebekesi \u0130halesi "
+  ihaleAdi: Retail Plaza
   ihaleFiyati: 250000
   gerekliIsciler: 5
   gerekliMuhendisler: 2

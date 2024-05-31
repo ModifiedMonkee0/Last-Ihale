@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78763599bbd53d4f88de6110df58025, type: 3}
   m_Name: Ihale 17
   m_EditorClassIdentifier: 
-  ihaleAdi: "Deprem G\xFC\xE7lendirme \u0130halesi"
+  ihaleAdi: Small Hotel Construction
   ihaleFiyati: 400000
   gerekliIsciler: 4
   gerekliMuhendisler: 3

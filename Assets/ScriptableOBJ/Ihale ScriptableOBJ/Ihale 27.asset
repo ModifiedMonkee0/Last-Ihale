@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78763599bbd53d4f88de6110df58025, type: 3}
   m_Name: Ihale 27
   m_EditorClassIdentifier: 
-  ihaleAdi: "Metro \u0130stasyonu \u0130halesi"
+  ihaleAdi: Large Retail Store
   ihaleFiyati: 20000000
   gerekliIsciler: 20
   gerekliMuhendisler: 10

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78763599bbd53d4f88de6110df58025, type: 3}
   m_Name: Ihale 8
   m_EditorClassIdentifier: 
-  ihaleAdi: "K\xFClt\xFCr Merkezi \u0130n\u015Faat \u0130halesi"
+  ihaleAdi: Office Space Renovation
   ihaleFiyati: 300000
   gerekliIsciler: 8
   gerekliMuhendisler: 3

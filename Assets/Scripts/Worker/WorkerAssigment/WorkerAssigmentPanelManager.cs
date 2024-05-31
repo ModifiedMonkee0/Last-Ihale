@@ -134,9 +134,9 @@ public class WorkerAssignmentPanelManager : MonoBehaviour
 
     public void UpdateWorkerCounts()
     {
-        goodEngineerCountText.text = ("Ýyi Mühendis: " + playerData.goodEngineerData.count.ToString());
-        badEngineerCountText.text = ("Kötü Mühendis:" + playerData.badEngineerData.count.ToString());
-        goodWorkerCountText.text = ("Ýyi iþci: " + playerData.goodWorkerData.count.ToString());
-        badWorkerCountText.text = ("Kötü Ýþci: " + playerData.badWorkerData.count.ToString());
+        goodEngineerCountText.text = ("Good Engineer: " + playerData.goodEngineerData.count.ToString());
+        badEngineerCountText.text = ("Bad Engineer:" + playerData.badEngineerData.count.ToString());
+        goodWorkerCountText.text = ("Good Worker: " + playerData.goodWorkerData.count.ToString());
+        badWorkerCountText.text = ("Bad Worker: " + playerData.badWorkerData.count.ToString());
     }
 }

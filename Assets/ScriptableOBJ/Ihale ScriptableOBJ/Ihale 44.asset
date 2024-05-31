@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78763599bbd53d4f88de6110df58025, type: 3}
   m_Name: Ihale 44
   m_EditorClassIdentifier: 
-  ihaleAdi: "Trafik Sinyalizasyon Sistemi \u0130halesi "
+  ihaleAdi: Mega Shopping Mall
   ihaleFiyati: 2000000
   gerekliIsciler: 20
   gerekliMuhendisler: 15

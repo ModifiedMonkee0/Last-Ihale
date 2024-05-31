@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78763599bbd53d4f88de6110df58025, type: 3}
   m_Name: Ihale 29
   m_EditorClassIdentifier: 
-  ihaleAdi: "Baraj \u0130n\u015Faat \u0130halesi"
+  ihaleAdi: Luxury Condo Development
   ihaleFiyati: 1700000
   gerekliIsciler: 16
   gerekliMuhendisler: 6

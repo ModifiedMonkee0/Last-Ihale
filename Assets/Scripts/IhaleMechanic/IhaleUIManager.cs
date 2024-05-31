@@ -36,9 +36,9 @@ public class IhaleUIManager : MonoBehaviour
                 // Ýhale bilgilerini UI elemanlarýna atama
                 ihaleIsimArray[i].text = ihaleDataArray[i].ihaleAdi;
                 ihaleFiyatArray[i].text = ihaleDataArray[i].ihaleFiyati.ToString("C2");
-                ihaleMühendisArray[i].text = "Gerekli Mühendisler: " +ihaleDataArray[i].gerekliMuhendisler.ToString();
-                ihaleIsciArray[i].text = "Gerekli Ýþciler: " + ihaleDataArray[i].gerekliIsciler.ToString();
-                ihaleGercekleþmeOraný[i].text = "Baþarý Oraný: " + ihaleDataArray[i].gerceklesmeOrani.ToString();
+                ihaleMühendisArray[i].text = "Required Engineers: " + ihaleDataArray[i].gerekliMuhendisler.ToString();
+                ihaleIsciArray[i].text = "Required Workers: " + ihaleDataArray[i].gerekliIsciler.ToString();
+                ihaleGercekleþmeOraný[i].text = "Success Change: " + ihaleDataArray[i].gerceklesmeOrani.ToString();
 
 
 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78763599bbd53d4f88de6110df58025, type: 3}
   m_Name: Ihale 1
   m_EditorClassIdentifier: 
-  ihaleAdi: "Park ve Bah\xE7e D\xFCzenleme \u0130halesi"
+  ihaleAdi: Small House Construction
   ihaleFiyati: 50000
   gerekliIsciler: 1
   gerekliMuhendisler: 1

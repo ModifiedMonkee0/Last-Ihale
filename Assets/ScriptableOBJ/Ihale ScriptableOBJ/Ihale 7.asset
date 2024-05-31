@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78763599bbd53d4f88de6110df58025, type: 3}
   m_Name: Ihale 7
   m_EditorClassIdentifier: 
-  ihaleAdi: "Trafik Sinyalizasyon Sistemi \u0130halesi"
+  ihaleAdi: Small Retail Store
   ihaleFiyati: 60000
   gerekliIsciler: 5
   gerekliMuhendisler: 1

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78763599bbd53d4f88de6110df58025, type: 3}
   m_Name: Ihale 2
   m_EditorClassIdentifier: 
-  ihaleAdi: "Yaya K\xF6pr\xFCs\xFC \u0130n\u015Faat \u0130halesi"
+  ihaleAdi: Garden Shed Construction
   ihaleFiyati: 150000
   gerekliIsciler: 6
   gerekliMuhendisler: 2

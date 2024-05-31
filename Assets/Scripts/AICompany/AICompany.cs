@@ -14,9 +14,12 @@ public class AICompany : MonoBehaviour
     private System.Random random = new System.Random();
 
     void Start()
-    {
+    {//Ihale Satýn Alma 
         StartCoroutine(CheckForIhalesRoutine());
+
+        //iþcilere para ödeme
         StartCoroutine(PayWorkerMaintenanceRoutine());
+        //iþçi sayýsýný ayarlama
         StartCoroutine(AdjustWorkersRoutine());
     }
 
@@ -24,7 +27,9 @@ public class AICompany : MonoBehaviour
     {
         while (true)
         {
+            //checkInterval kadar bekleyecek
             yield return new WaitForSeconds(checkInterval);
+            //sonra devam ediyor. En iyi ihaleyi bulup satýn alma fonksiyonu çaýþacak. 85
             EvaluateAndPurchaseBestIhale();
         }
     }
@@ -79,8 +84,9 @@ public class AICompany : MonoBehaviour
 
     void EvaluateAndPurchaseBestIhale()
     {
-        IhaleData bestIhale = FindAffordableIhale();
-        if (bestIhale != null)
+        //best ihale yi bulmak için. Ihale data array'inde yeni var'ý En uygun ihale fonksiyonundan cýkan ihaleye eþitliyoruz.
+        IhaleData bestIhale = FindAffordableIhale(); //Matematiksel iþlem yapan fonksiyona gidiyoruz.
+        if (bestIhale != null) //eðer best ihale bulunduysa.
         {
             if (CanAffordIhale(bestIhale))
             {
@@ -91,9 +97,10 @@ public class AICompany : MonoBehaviour
 
     IhaleData FindAffordableIhale()
     {
-        IhaleData bestAffordableIhale = null;
+        IhaleData bestAffordableIhale = null; //þimdi en iyi ihalaler arasýndan en eriþilebilir olaný seçmek için iþlemler yapýlacak.
+        IhaleData bestIhale = SelectBestIhale();
         float bestScore = float.MinValue;
-
+       
         foreach (IhaleData ihale in availableIhaleler)
         {
             int requiredWorkers = ihale.gerekliIsciler + ihale.gerekliMuhendisler;

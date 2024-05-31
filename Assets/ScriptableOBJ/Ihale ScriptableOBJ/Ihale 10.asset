@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78763599bbd53d4f88de6110df58025, type: 3}
   m_Name: Ihale 10
   m_EditorClassIdentifier: 
-  ihaleAdi: "Yol Yap\u0131m \u0130halesi"
+  ihaleAdi: Medium Apartment Renovation
   ihaleFiyati: 200000
   gerekliIsciler: 5
   gerekliMuhendisler: 2

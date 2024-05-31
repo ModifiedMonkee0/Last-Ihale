@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78763599bbd53d4f88de6110df58025, type: 3}
   m_Name: Ihale 36
   m_EditorClassIdentifier: 
-  ihaleAdi: "Sahil G\xFCvenlik Binas\u0131 \u0130halesi "
+  ihaleAdi: Business Park
   ihaleFiyati: 4000000
   gerekliIsciler: 14
   gerekliMuhendisler: 7

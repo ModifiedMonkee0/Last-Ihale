@@ -12,8 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3836ac61f841e9f499afbc061b66b4fc, type: 3}
   m_Name: AI_2
   m_EditorClassIdentifier: 
-  companyName: "Az g\xFC\xE7l\xFC"
-  totalMoney: 600000
-  totalWorkers: 9
-  purchasedIhaleler: []
+  companyName: Elwan Pastanesi
+  totalMoney: 216500
+  totalWorkers: 0
+  purchasedIhaleler:
+  - {fileID: 11400000, guid: 4f15ca19737123b47b243d3ffecbc81d, type: 2}
+  - {fileID: 11400000, guid: 17fb39a50d6b644e8b1da1ee1dbc32f1, type: 2}
+  - {fileID: 11400000, guid: af8b0ad28c7c66744b8ebccf9e845ae6, type: 2}
+  - {fileID: 11400000, guid: 8ed0cbda1cda01444896bcbcae0248ac, type: 2}
+  - {fileID: 11400000, guid: c212950d414b6f14ea8ac3bda522db2d, type: 2}
+  - {fileID: 11400000, guid: 8e887c04cfe9d914b8c499d436d5b9d5, type: 2}
+  - {fileID: 11400000, guid: f8632d9bacbd040a5b18efd786d4dd43, type: 2}
+  - {fileID: 11400000, guid: 86259a512a72a4833a647266bffab6c3, type: 2}
+  - {fileID: 11400000, guid: 2884ba87c8a9ff44d850ed14ab89cfb5, type: 2}
+  - {fileID: 11400000, guid: 5ed24beb00ed80b419a4b3abe7018a3c, type: 2}
+  - {fileID: 11400000, guid: 24acdc4ff331c1b42bced159d3c9804b, type: 2}
+  - {fileID: 11400000, guid: fc802e5a9238a2a419a834763c10a991, type: 2}
+  - {fileID: 11400000, guid: 7461f5555ffb4bb45b2192fdeb59b141, type: 2}
+  - {fileID: 11400000, guid: aeb0bf4be414c144da59bc31a9f95f65, type: 2}
+  - {fileID: 11400000, guid: efca48af5f3c70846b3eeee3128b081b, type: 2}
+  - {fileID: 11400000, guid: 227cd965674a7f14e929127e32f15a23, type: 2}
+  - {fileID: 11400000, guid: 528e21ef7e86adc4b90e39aa207276fb, type: 2}
+  - {fileID: 11400000, guid: 9a2e49b0765a2894e9a98ffae38226aa, type: 2}
+  - {fileID: 11400000, guid: 578383ac92664364ead14a0dafe7903f, type: 2}
   difficultyLevel: 2

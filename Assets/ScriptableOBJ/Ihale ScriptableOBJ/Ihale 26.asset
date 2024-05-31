@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78763599bbd53d4f88de6110df58025, type: 3}
   m_Name: Ihale 26
   m_EditorClassIdentifier: 
-  ihaleAdi: "Tren Gar\u0131 \u0130n\u015Faat \u0130halesi"
+  ihaleAdi: High School Building
   ihaleFiyati: 2400000
   gerekliIsciler: 16
   gerekliMuhendisler: 5
